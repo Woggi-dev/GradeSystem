@@ -38,6 +38,9 @@
     <Reference Include="Devart.Data.PostgreSql.Vs, Version=8.1.151.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,19 +52,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forms\Form1.cs">
+    <Compile Include="forms\logForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\logForm.Designer.cs">
+      <DependentUpon>logForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\regForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\regForm1.Designer.cs">
+      <DependentUpon>regForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="classes\Database.cs" />
     <Compile Include="classes\Program.cs" />
+    <Compile Include="forms\homePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\homePageForm.Designer.cs">
+      <DependentUpon>homePageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\regForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\regForm2.Designer.cs">
+      <DependentUpon>regForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\regForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\regForm3.Designer.cs">
+      <DependentUpon>regForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="forms\logForm.resx">
+      <DependentUpon>logForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\regForm1.resx">
+      <DependentUpon>regForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\homePageForm.resx">
+      <DependentUpon>homePageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\regForm2.resx">
+      <DependentUpon>regForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\regForm3.resx">
+      <DependentUpon>regForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="icons\" />
-    <Folder Include="images\" />
-    <Folder Include="Properties\" />
+    <None Include="icons\white_crossed.png" />
+    <None Include="images\HomePage.jpg" />
+    <None Include="icons\close.png" />
+    <Content Include="icons\free-icon-close-1828665.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

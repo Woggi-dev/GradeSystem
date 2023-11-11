@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeSystem
+namespace GradeSystem.forms
 {
-    public partial class Form1 : Form
+    public partial class regForm2 : Form
     {
-        public Form1()
+        public regForm2()
         {
             InitializeComponent();
         }
+
+        
     }
 }
