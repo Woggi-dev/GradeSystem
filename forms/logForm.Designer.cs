@@ -29,53 +29,55 @@ namespace GradeSystem.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fullyLogButton = new System.Windows.Forms.Button();
+            this.pwdShowCheckbox = new System.Windows.Forms.CheckBox();
+            this.pwdTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pwdRecoveryButton = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.regButton = new System.Windows.Forms.Button();
+            this.homepageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button4
+            // fullyLogButton
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(59, 302);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(274, 30);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "Войти";
-            this.button4.UseVisualStyleBackColor = false;
+            this.fullyLogButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.fullyLogButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fullyLogButton.FlatAppearance.BorderSize = 0;
+            this.fullyLogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fullyLogButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fullyLogButton.ForeColor = System.Drawing.Color.White;
+            this.fullyLogButton.Location = new System.Drawing.Point(59, 302);
+            this.fullyLogButton.Name = "fullyLogButton";
+            this.fullyLogButton.Size = new System.Drawing.Size(274, 30);
+            this.fullyLogButton.TabIndex = 31;
+            this.fullyLogButton.Text = "Войти";
+            this.fullyLogButton.UseVisualStyleBackColor = false;
+            this.fullyLogButton.Click += new System.EventHandler(this.fullyLogButton_Click);
             // 
-            // checkBox1
+            // pwdShowCheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.checkBox1.Location = new System.Drawing.Point(58, 257);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(117, 17);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.Text = "Показать пароль";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.pwdShowCheckbox.AutoSize = true;
+            this.pwdShowCheckbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pwdShowCheckbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
+            this.pwdShowCheckbox.Location = new System.Drawing.Point(58, 257);
+            this.pwdShowCheckbox.Name = "pwdShowCheckbox";
+            this.pwdShowCheckbox.Size = new System.Drawing.Size(117, 17);
+            this.pwdShowCheckbox.TabIndex = 28;
+            this.pwdShowCheckbox.Text = "Показать пароль";
+            this.pwdShowCheckbox.UseVisualStyleBackColor = true;
+            this.pwdShowCheckbox.CheckedChanged += new System.EventHandler(this.pwdShowCheckbox_CheckedChanged);
             // 
-            // textBox2
+            // pwdTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(58, 216);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 35);
-            this.textBox2.TabIndex = 25;
+            this.pwdTextbox.Location = new System.Drawing.Point(58, 216);
+            this.pwdTextbox.Multiline = true;
+            this.pwdTextbox.Name = "pwdTextbox";
+            this.pwdTextbox.Size = new System.Drawing.Size(275, 35);
+            this.pwdTextbox.TabIndex = 25;
             // 
             // label5
             // 
@@ -88,47 +90,47 @@ namespace GradeSystem.forms
             this.label5.TabIndex = 24;
             this.label5.Text = "Пароль";
             // 
-            // textBox1
+            // loginTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 139);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 35);
-            this.textBox1.TabIndex = 23;
+            this.loginTextbox.Location = new System.Drawing.Point(58, 139);
+            this.loginTextbox.Multiline = true;
+            this.loginTextbox.Name = "loginTextbox";
+            this.loginTextbox.Size = new System.Drawing.Size(275, 35);
+            this.loginTextbox.TabIndex = 23;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
             this.label4.Location = new System.Drawing.Point(55, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 20);
+            this.label4.Size = new System.Drawing.Size(235, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Телефон или электронная почта";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.label1.Location = new System.Drawing.Point(90, 59);
+            this.label1.Location = new System.Drawing.Point(98, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 40);
+            this.label1.Size = new System.Drawing.Size(191, 40);
             this.label1.TabIndex = 18;
             this.label1.Text = "Авторизация";
             // 
-            // label2
+            // pwdRecoveryButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(203, 259);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 15);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Восстановить пароль";
+            this.pwdRecoveryButton.AutoSize = true;
+            this.pwdRecoveryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pwdRecoveryButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pwdRecoveryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
+            this.pwdRecoveryButton.Location = new System.Drawing.Point(203, 259);
+            this.pwdRecoveryButton.Name = "pwdRecoveryButton";
+            this.pwdRecoveryButton.Size = new System.Drawing.Size(126, 15);
+            this.pwdRecoveryButton.TabIndex = 32;
+            this.pwdRecoveryButton.Text = "Восстановить пароль";
             // 
             // label3
             // 
@@ -141,34 +143,35 @@ namespace GradeSystem.forms
             this.label3.TabIndex = 33;
             this.label3.Text = "или";
             // 
-            // button1
+            // regButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button1.Location = new System.Drawing.Point(105, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 30);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Зарегистрироваться";
-            this.button1.UseVisualStyleBackColor = false;
+            this.regButton.BackColor = System.Drawing.Color.Black;
+            this.regButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.regButton.FlatAppearance.BorderSize = 0;
+            this.regButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.regButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.regButton.Location = new System.Drawing.Point(105, 363);
+            this.regButton.Name = "regButton";
+            this.regButton.Size = new System.Drawing.Size(189, 30);
+            this.regButton.TabIndex = 34;
+            this.regButton.Text = "Зарегистрироваться";
+            this.regButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // homepageButton
             // 
-            this.button2.BackgroundImage = global::GradeSystem.Properties.Resources.white_crossed1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(15, 15);
-            this.button2.TabIndex = 35;
-            this.button2.UseVisualStyleBackColor = true;
+            this.homepageButton.BackgroundImage = global::GradeSystem.Properties.Resources.white_crossed1;
+            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homepageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homepageButton.FlatAppearance.BorderSize = 0;
+            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.ForeColor = System.Drawing.Color.Gray;
+            this.homepageButton.Location = new System.Drawing.Point(12, 12);
+            this.homepageButton.Name = "homepageButton";
+            this.homepageButton.Size = new System.Drawing.Size(15, 15);
+            this.homepageButton.TabIndex = 35;
+            this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // logForm
             // 
@@ -176,15 +179,15 @@ namespace GradeSystem.forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(390, 458);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.homepageButton);
+            this.Controls.Add(this.regButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.pwdRecoveryButton);
+            this.Controls.Add(this.fullyLogButton);
+            this.Controls.Add(this.pwdShowCheckbox);
+            this.Controls.Add(this.pwdTextbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.loginTextbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
@@ -198,16 +201,16 @@ namespace GradeSystem.forms
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button fullyLogButton;
+        private System.Windows.Forms.CheckBox pwdShowCheckbox;
+        private System.Windows.Forms.TextBox pwdTextbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox loginTextbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label pwdRecoveryButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button regButton;
+        private System.Windows.Forms.Button homepageButton;
     }
 }

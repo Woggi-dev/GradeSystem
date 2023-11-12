@@ -16,7 +16,18 @@ namespace GradeSystem.forms
         {
             InitializeComponent();
         }
+        private void regButton_Click(object sender, EventArgs e)
+        {
+            regForm1 regForm1 = new regForm1();
+            this.Hide();
+            regForm1.Show();
+        }
 
-        
+        private void logButton_Click(object sender, EventArgs e)
+        {
+            logForm logForm = new logForm();
+            this.Hide();
+            logForm.Show();
+        }
     }
 }
