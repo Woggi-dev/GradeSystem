@@ -31,234 +31,247 @@ namespace GradeSystem.forms
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.regButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.mainTitleEducation = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.mainTitleMvn = new System.Windows.Forms.Label();
+            this.logButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.aboutButton = new System.Windows.Forms.Label();
+            this.privacyButton = new System.Windows.Forms.Label();
+            this.conditionsButton = new System.Windows.Forms.Label();
+            this.versionButton = new System.Windows.Forms.Label();
+            this.contactButton = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.regButton);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(554, 167);
+            this.panel1.Location = new System.Drawing.Point(804, 132);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 195);
+            this.panel1.Size = new System.Drawing.Size(259, 264);
             this.panel1.TabIndex = 1;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(11, 135);
+            this.label6.Location = new System.Drawing.Point(8, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 46);
+            this.label6.Size = new System.Drawing.Size(237, 84);
             this.label6.TabIndex = 3;
             this.label6.Text = "Регистрируясь, вы соглашаетесь с Условиями предоставления услуг и Политикой конфи" +
     "денциальности, ";
             // 
-            // button1
+            // regButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(10, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Зарегистрироваться";
-            this.button1.UseVisualStyleBackColor = false;
+            this.regButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(139)))), ((int)(((byte)(222)))));
+            this.regButton.FlatAppearance.BorderSize = 0;
+            this.regButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regButton.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.regButton.ForeColor = System.Drawing.Color.Transparent;
+            this.regButton.Location = new System.Drawing.Point(8, 124);
+            this.regButton.Name = "regButton";
+            this.regButton.Size = new System.Drawing.Size(242, 31);
+            this.regButton.TabIndex = 2;
+            this.regButton.Text = "Зарегистрироваться";
+            this.regButton.UseVisualStyleBackColor = false;
+            this.regButton.Click += new System.EventHandler(this.regButton_Click);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 49);
+            this.label5.Location = new System.Drawing.Point(3, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 21);
+            this.label5.Size = new System.Drawing.Size(254, 33);
             this.label5.TabIndex = 1;
             this.label5.Text = "Присоединятейсь сегодня.";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 10);
+            this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(221, 67);
+            this.label4.Size = new System.Drawing.Size(259, 70);
             this.label4.TabIndex = 0;
-            this.label4.Text = "В курсе оценок";
+            this.label4.Text = "В курсе оценок!";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label1
+            // mainTitleEducation
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 80);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Цифровое образование в школах\r\n";
+            this.mainTitleEducation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainTitleEducation.Font = new System.Drawing.Font("Segoe UI", 29.25F);
+            this.mainTitleEducation.ForeColor = System.Drawing.Color.White;
+            this.mainTitleEducation.Location = new System.Drawing.Point(47, 8);
+            this.mainTitleEducation.Name = "mainTitleEducation";
+            this.mainTitleEducation.Size = new System.Drawing.Size(441, 109);
+            this.mainTitleEducation.TabIndex = 2;
+            this.mainTitleEducation.Text = "Цифровое образование в школах\r\n";
+            this.mainTitleEducation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 104);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(52, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(399, 73);
+            this.label2.Size = new System.Drawing.Size(428, 85);
             this.label2.TabIndex = 3;
             this.label2.Text = "Система учета оценок помогает учиться лучше, быть в курсе всех школьных событий и" +
     " готовиться к урокам с новыми технологиями. В любое время и с любых устройств";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // mainTitleMvn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(583, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 86);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "MVN";
+            this.mainTitleMvn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mainTitleMvn.Font = new System.Drawing.Font("Segoe UI Semibold", 61F, System.Drawing.FontStyle.Bold);
+            this.mainTitleMvn.ForeColor = System.Drawing.Color.White;
+            this.mainTitleMvn.Location = new System.Drawing.Point(804, 8);
+            this.mainTitleMvn.Name = "mainTitleMvn";
+            this.mainTitleMvn.Size = new System.Drawing.Size(259, 109);
+            this.mainTitleMvn.TabIndex = 4;
+            this.mainTitleMvn.Text = "МВН";
+            this.mainTitleMvn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button2
+            // logButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(567, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 31);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Войти";
-            this.button2.UseVisualStyleBackColor = false;
+            this.logButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logButton.BackColor = System.Drawing.Color.Black;
+            this.logButton.FlatAppearance.BorderSize = 0;
+            this.logButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logButton.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logButton.ForeColor = System.Drawing.Color.Transparent;
+            this.logButton.Location = new System.Drawing.Point(804, 431);
+            this.logButton.Name = "logButton";
+            this.logButton.Size = new System.Drawing.Size(259, 31);
+            this.logButton.TabIndex = 4;
+            this.logButton.Text = "Войти";
+            this.logButton.UseVisualStyleBackColor = false;
+            this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(595, 375);
+            this.label7.Location = new System.Drawing.Point(804, 399);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 17);
+            this.label7.Size = new System.Drawing.Size(259, 30);
             this.label7.TabIndex = 5;
             this.label7.Text = "Уже зарегистрированы?";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = global::GradeSystem.Properties.Resources.HomePage;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 167);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 292);
+            this.pictureBox1.Size = new System.Drawing.Size(441, 330);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
+            // aboutButton
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(43, 508);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "О нас";
+            this.aboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.aboutButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.aboutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.aboutButton.Location = new System.Drawing.Point(0, 592);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(1156, 32);
+            this.aboutButton.TabIndex = 6;
+            this.aboutButton.Text = "О нас";
+            this.aboutButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label9
+            // privacyButton
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(136, 508);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(179, 13);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Политика конфиденциальности";
+            this.privacyButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.privacyButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.privacyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.privacyButton.Location = new System.Drawing.Point(0, 560);
+            this.privacyButton.Name = "privacyButton";
+            this.privacyButton.Size = new System.Drawing.Size(1156, 32);
+            this.privacyButton.TabIndex = 7;
+            this.privacyButton.Text = "Политика конфиденциальности";
+            this.privacyButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label10
+            // conditionsButton
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label10.Location = new System.Drawing.Point(379, 508);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(169, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Условия предоставления услуг";
+            this.conditionsButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.conditionsButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.conditionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.conditionsButton.Location = new System.Drawing.Point(0, 528);
+            this.conditionsButton.Name = "conditionsButton";
+            this.conditionsButton.Size = new System.Drawing.Size(1156, 32);
+            this.conditionsButton.TabIndex = 8;
+            this.conditionsButton.Text = "Условия предоставления услуг";
+            this.conditionsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label11
+            // versionButton
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(766, 508);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Версия 1.1.1";
+            this.versionButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.versionButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.versionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.versionButton.Location = new System.Drawing.Point(0, 496);
+            this.versionButton.Name = "versionButton";
+            this.versionButton.Size = new System.Drawing.Size(1156, 32);
+            this.versionButton.TabIndex = 9;
+            this.versionButton.Text = "Версия 1.1.1";
+            this.versionButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label12
+            // contactButton
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(612, 508);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 13);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Связаться с нами";
+            this.contactButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.contactButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contactButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contactButton.Location = new System.Drawing.Point(0, 464);
+            this.contactButton.Name = "contactButton";
+            this.contactButton.Size = new System.Drawing.Size(1156, 32);
+            this.contactButton.TabIndex = 10;
+            this.contactButton.Text = "Связаться с нами";
+            this.contactButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // homePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(862, 536);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.ClientSize = new System.Drawing.Size(1156, 624);
+            this.Controls.Add(this.contactButton);
+            this.Controls.Add(this.versionButton);
+            this.Controls.Add(this.conditionsButton);
+            this.Controls.Add(this.privacyButton);
+            this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.mainTitleMvn);
+            this.Controls.Add(this.logButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.mainTitleEducation);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "homePageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "homePageForm";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -267,18 +280,18 @@ namespace GradeSystem.forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button regButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label mainTitleEducation;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label mainTitleMvn;
+        private System.Windows.Forms.Button logButton;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label aboutButton;
+        private System.Windows.Forms.Label privacyButton;
+        private System.Windows.Forms.Label conditionsButton;
+        private System.Windows.Forms.Label versionButton;
+        private System.Windows.Forms.Label contactButton;
     }
 }

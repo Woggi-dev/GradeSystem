@@ -1,7 +1,7 @@
 ﻿
-namespace GradeSystem
+namespace GradeSystem.forms
 {
-    partial class Form1
+    partial class regForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -36,16 +36,16 @@ namespace GradeSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.nameTextbox = new System.Windows.Forms.TextBox();
+            this.surnameTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.patronymicTextbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.patronymicCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.homepageButton = new System.Windows.Forms.Button();
+            this.logButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -102,21 +102,22 @@ namespace GradeSystem
             this.label4.TabIndex = 6;
             this.label4.Text = "Имя";
             // 
-            // textBox1
+            // nameTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 262);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 35);
-            this.textBox1.TabIndex = 7;
+            this.nameTextbox.Location = new System.Drawing.Point(52, 262);
+            this.nameTextbox.Multiline = true;
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(275, 35);
+            this.nameTextbox.TabIndex = 7;
+            this.nameTextbox.TextChanged += new System.EventHandler(this.nameTextbox_TextChanged);
             // 
-            // textBox2
+            // surnameTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(52, 339);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 35);
-            this.textBox2.TabIndex = 9;
+            this.surnameTextbox.Location = new System.Drawing.Point(52, 339);
+            this.surnameTextbox.Multiline = true;
+            this.surnameTextbox.Name = "surnameTextbox";
+            this.surnameTextbox.Size = new System.Drawing.Size(275, 35);
+            this.surnameTextbox.TabIndex = 9;
             // 
             // label5
             // 
@@ -129,13 +130,13 @@ namespace GradeSystem
             this.label5.TabIndex = 8;
             this.label5.Text = "Фамилия";
             // 
-            // textBox3
+            // patronymicTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(53, 414);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 35);
-            this.textBox3.TabIndex = 11;
+            this.patronymicTextbox.Location = new System.Drawing.Point(53, 414);
+            this.patronymicTextbox.Multiline = true;
+            this.patronymicTextbox.Name = "patronymicTextbox";
+            this.patronymicTextbox.Size = new System.Drawing.Size(275, 35);
+            this.patronymicTextbox.TabIndex = 11;
             // 
             // label6
             // 
@@ -148,17 +149,17 @@ namespace GradeSystem
             this.label6.TabIndex = 10;
             this.label6.Text = "Отчество";
             // 
-            // checkBox1
+            // patronymicCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.checkBox1.Location = new System.Drawing.Point(52, 455);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(109, 21);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Нет отчества";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.patronymicCheckBox.AutoSize = true;
+            this.patronymicCheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.patronymicCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
+            this.patronymicCheckBox.Location = new System.Drawing.Point(52, 455);
+            this.patronymicCheckBox.Name = "patronymicCheckBox";
+            this.patronymicCheckBox.Size = new System.Drawing.Size(109, 21);
+            this.patronymicCheckBox.TabIndex = 12;
+            this.patronymicCheckBox.Text = "Нет отчества";
+            this.patronymicCheckBox.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -171,64 +172,67 @@ namespace GradeSystem
             this.label7.TabIndex = 15;
             this.label7.Text = "Шаг 1 из 3";
             // 
-            // button4
+            // nextButton
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button4.Location = new System.Drawing.Point(273, 483);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 38);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Далее";
-            this.button4.UseVisualStyleBackColor = true;
+            this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextButton.FlatAppearance.BorderSize = 0;
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.nextButton.Location = new System.Drawing.Point(273, 483);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(82, 38);
+            this.nextButton.TabIndex = 17;
+            this.nextButton.Text = "Далее";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
-            // button2
+            // homepageButton
             // 
-            this.button2.BackgroundImage = global::GradeSystem.Properties.Resources.white_crossed1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(12, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(15, 15);
-            this.button2.TabIndex = 16;
-            this.button2.UseVisualStyleBackColor = true;
+            this.homepageButton.BackgroundImage = global::GradeSystem.Properties.Resources.white_crossed1;
+            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homepageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homepageButton.FlatAppearance.BorderSize = 0;
+            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.ForeColor = System.Drawing.Color.Gray;
+            this.homepageButton.Location = new System.Drawing.Point(12, 23);
+            this.homepageButton.Name = "homepageButton";
+            this.homepageButton.Size = new System.Drawing.Size(15, 15);
+            this.homepageButton.TabIndex = 16;
+            this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
-            // button3
+            // logButton
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button3.Location = new System.Drawing.Point(273, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 38);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Войти";
-            this.button3.UseVisualStyleBackColor = true;
+            this.logButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logButton.FlatAppearance.BorderSize = 0;
+            this.logButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.logButton.Location = new System.Drawing.Point(273, 9);
+            this.logButton.Name = "logButton";
+            this.logButton.Size = new System.Drawing.Size(82, 38);
+            this.logButton.TabIndex = 18;
+            this.logButton.Text = "Войти";
+            this.logButton.UseVisualStyleBackColor = true;
+            this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
-            // Form1
+            // regForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(382, 544);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.logButton);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.homepageButton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.patronymicCheckBox);
+            this.Controls.Add(this.patronymicTextbox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.surnameTextbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -236,7 +240,7 @@ namespace GradeSystem
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "regForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.ResumeLayout(false);
@@ -251,16 +255,16 @@ namespace GradeSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox nameTextbox;
+        private System.Windows.Forms.TextBox surnameTextbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox patronymicTextbox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox patronymicCheckBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button homepageButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button logButton;
     }
 }
 

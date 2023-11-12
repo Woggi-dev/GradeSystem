@@ -29,26 +29,26 @@ namespace GradeSystem.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.phoneTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.logButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.homepageButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox2
+            // emailTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(47, 286);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 35);
-            this.textBox2.TabIndex = 25;
+            this.emailTextbox.Location = new System.Drawing.Point(47, 286);
+            this.emailTextbox.Multiline = true;
+            this.emailTextbox.Name = "emailTextbox";
+            this.emailTextbox.Size = new System.Drawing.Size(275, 35);
+            this.emailTextbox.TabIndex = 25;
             // 
             // label5
             // 
@@ -61,13 +61,13 @@ namespace GradeSystem.forms
             this.label5.TabIndex = 24;
             this.label5.Text = "Электронная почта";
             // 
-            // textBox1
+            // phoneTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 209);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 35);
-            this.textBox1.TabIndex = 23;
+            this.phoneTextbox.Location = new System.Drawing.Point(47, 209);
+            this.phoneTextbox.Multiline = true;
+            this.phoneTextbox.Name = "phoneTextbox";
+            this.phoneTextbox.Size = new System.Drawing.Size(275, 35);
+            this.phoneTextbox.TabIndex = 23;
             // 
             // label4
             // 
@@ -102,47 +102,50 @@ namespace GradeSystem.forms
             this.label2.Text = "На указанные номер мобильного телефона и адрес электронной почты будут отправлены" +
     " коды подтверждения регистрации";
             // 
-            // button5
+            // logButton
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button5.Location = new System.Drawing.Point(275, 11);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 38);
-            this.button5.TabIndex = 34;
-            this.button5.Text = "Войти";
-            this.button5.UseVisualStyleBackColor = true;
+            this.logButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logButton.FlatAppearance.BorderSize = 0;
+            this.logButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.logButton.Location = new System.Drawing.Point(275, 11);
+            this.logButton.Name = "logButton";
+            this.logButton.Size = new System.Drawing.Size(82, 38);
+            this.logButton.TabIndex = 34;
+            this.logButton.Text = "Войти";
+            this.logButton.UseVisualStyleBackColor = true;
+            this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
-            // button1
+            // nextButton
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button1.Location = new System.Drawing.Point(275, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 38);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Далее";
-            this.button1.UseVisualStyleBackColor = true;
+            this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextButton.FlatAppearance.BorderSize = 0;
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.nextButton.Location = new System.Drawing.Point(275, 343);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(82, 38);
+            this.nextButton.TabIndex = 35;
+            this.nextButton.Text = "Далее";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
-            // button2
+            // homepageButton
             // 
-            this.button2.BackgroundImage = global::GradeSystem.Properties.Resources.white_crossed1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(10, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(15, 15);
-            this.button2.TabIndex = 37;
-            this.button2.UseVisualStyleBackColor = true;
+            this.homepageButton.BackgroundImage = global::GradeSystem.Properties.Resources.white_crossed1;
+            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homepageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homepageButton.FlatAppearance.BorderSize = 0;
+            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.ForeColor = System.Drawing.Color.Gray;
+            this.homepageButton.Location = new System.Drawing.Point(10, 26);
+            this.homepageButton.Name = "homepageButton";
+            this.homepageButton.Size = new System.Drawing.Size(15, 15);
+            this.homepageButton.TabIndex = 37;
+            this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // label7
             // 
@@ -155,19 +158,20 @@ namespace GradeSystem.forms
             this.label7.TabIndex = 36;
             this.label7.Text = "Шаг 2 из 3";
             // 
-            // button4
+            // backButton
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button4.Location = new System.Drawing.Point(12, 343);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 38);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "Вернуться";
-            this.button4.UseVisualStyleBackColor = true;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
+            this.backButton.Location = new System.Drawing.Point(12, 343);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(122, 38);
+            this.backButton.TabIndex = 38;
+            this.backButton.Text = "Вернуться";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // regForm2
             // 
@@ -175,15 +179,15 @@ namespace GradeSystem.forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(381, 405);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.homepageButton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.logButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.emailTextbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.phoneTextbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -197,16 +201,16 @@ namespace GradeSystem.forms
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailTextbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox phoneTextbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button logButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button homepageButton;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button backButton;
     }
 }
