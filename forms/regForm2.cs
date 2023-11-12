@@ -44,5 +44,7 @@ namespace GradeSystem.forms
             this.Hide();
             homePageForm.Show();
         }
+
+        
     }
 }
