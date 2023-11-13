@@ -38,10 +38,10 @@ namespace GradeSystem.forms
             this.label7 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nameTextbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.errorLabelPhone = new System.Windows.Forms.Label();
+            this.errorLabelEmail = new System.Windows.Forms.Label();
+            this.phoneTextbox = new System.Windows.Forms.TextBox();
+            this.emailTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label5
@@ -159,46 +159,49 @@ namespace GradeSystem.forms
             this.label2.Text = "На указанный адрес электронной почты будет отправлен код подтверждения регистраци" +
     "и";
             // 
-            // label8
+            // errorLabelPhone
             // 
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.Khaki;
-            this.label8.Location = new System.Drawing.Point(156, 240);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 15);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Заполните поле";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.errorLabelPhone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.errorLabelPhone.ForeColor = System.Drawing.Color.Khaki;
+            this.errorLabelPhone.Location = new System.Drawing.Point(156, 240);
+            this.errorLabelPhone.Name = "errorLabelPhone";
+            this.errorLabelPhone.Size = new System.Drawing.Size(167, 15);
+            this.errorLabelPhone.TabIndex = 39;
+            this.errorLabelPhone.Text = "Заполните поле";
+            this.errorLabelPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // errorLabelEmail
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Khaki;
-            this.label1.Location = new System.Drawing.Point(156, 333);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 15);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Заполните поле";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.errorLabelEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.errorLabelEmail.ForeColor = System.Drawing.Color.Khaki;
+            this.errorLabelEmail.Location = new System.Drawing.Point(156, 333);
+            this.errorLabelEmail.Name = "errorLabelEmail";
+            this.errorLabelEmail.Size = new System.Drawing.Size(167, 15);
+            this.errorLabelEmail.TabIndex = 40;
+            this.errorLabelEmail.Text = "Заполните поле";
+            this.errorLabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // nameTextbox
+            // phoneTextbox
             // 
-            this.nameTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.nameTextbox.Location = new System.Drawing.Point(47, 202);
-            this.nameTextbox.Multiline = true;
-            this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.Size = new System.Drawing.Size(276, 35);
-            this.nameTextbox.TabIndex = 41;
-            this.nameTextbox.Text = "+7 ";
+            this.phoneTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.phoneTextbox.Location = new System.Drawing.Point(47, 202);
+            this.phoneTextbox.MaxLength = 12;
+            this.phoneTextbox.Multiline = true;
+            this.phoneTextbox.Name = "phoneTextbox";
+            this.phoneTextbox.Size = new System.Drawing.Size(276, 35);
+            this.phoneTextbox.TabIndex = 41;
+            this.phoneTextbox.Text = "+7 ";
+            this.phoneTextbox.TextChanged += new System.EventHandler(this.phoneTextbox_TextChanged);
             // 
-            // textBox1
+            // emailTextbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(47, 295);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 35);
-            this.textBox1.TabIndex = 42;
+            this.emailTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.emailTextbox.Location = new System.Drawing.Point(47, 295);
+            this.emailTextbox.Multiline = true;
+            this.emailTextbox.Name = "emailTextbox";
+            this.emailTextbox.Size = new System.Drawing.Size(276, 35);
+            this.emailTextbox.TabIndex = 42;
+            this.emailTextbox.TextChanged += new System.EventHandler(this.emailTextbox_TextChanged);
             // 
             // regForm2
             // 
@@ -206,10 +209,10 @@ namespace GradeSystem.forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(381, 436);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.nameTextbox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.emailTextbox);
+            this.Controls.Add(this.phoneTextbox);
+            this.Controls.Add(this.errorLabelEmail);
+            this.Controls.Add(this.errorLabelPhone);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.homepageButton);
             this.Controls.Add(this.label7);
@@ -238,9 +241,9 @@ namespace GradeSystem.forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox nameTextbox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label errorLabelPhone;
+        private System.Windows.Forms.Label errorLabelEmail;
+        private System.Windows.Forms.TextBox phoneTextbox;
+        private System.Windows.Forms.TextBox emailTextbox;
     }
 }
