@@ -70,6 +70,7 @@ namespace GradeSystem.forms
             // 
             // pwdShowCheckbox
             // 
+            this.pwdShowCheckbox.AutoSize = true;
             this.pwdShowCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pwdShowCheckbox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.pwdShowCheckbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));

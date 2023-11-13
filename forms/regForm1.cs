@@ -116,12 +116,15 @@ namespace GradeSystem.forms
             switch (patronymicCheckBox.Checked)
             {
                 case true:
+                    errorLabelPatronymic.Text = "🔒";
+                    errorLabelPatronymic.ForeColor = Color.Gray;
                     patronymicTextbox.Text = "";
                     patronymicTextbox.Enabled = false;
                     patronymicTextbox.BackColor = Color.FromArgb(224, 224, 224);
-                    errorLabelPatronymic.Visible = false;
                     break;
                 default:
+                    errorLabelPatronymic.Text = "Заполните поле";
+                    errorLabelPatronymic.ForeColor = Color.Khaki;
                     patronymicTextbox.Enabled = true;
                     patronymicTextbox.BackColor = Color.White;
                     errorLabelPatronymic.Visible = true;
@@ -138,6 +141,7 @@ namespace GradeSystem.forms
         private void patronymicTextbox_TextChanged(object sender, EventArgs e)
         {
             DataValidation(errorLabelPatronymic, patronymicTextbox.Text, "Отчество", ref isPatronymicValid);
+
 
         }
 

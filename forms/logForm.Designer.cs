@@ -174,6 +174,7 @@ namespace GradeSystem.forms
             // 
             // button1
             // 
+            this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -181,9 +182,9 @@ namespace GradeSystem.forms
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.button1.Location = new System.Drawing.Point(218, 254);
+            this.button1.Location = new System.Drawing.Point(216, 252);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 22);
+            this.button1.Size = new System.Drawing.Size(117, 27);
             this.button1.TabIndex = 36;
             this.button1.Text = "Забыли пароль?";
             this.button1.UseVisualStyleBackColor = false;
