@@ -16,16 +16,15 @@ namespace GradeSystem.forms
         {
             InitializeComponent();
         }
-
         public void PwdShowHide(CheckBox checkBoxName)
         {
             switch (pwdShowCheckbox.Checked)
             {
                 case true:
-                    pwdTextbox.PasswordChar = '•';
+                    pwdTextbox.PasswordChar = '\0';
                     break;
                 default:
-                    pwdTextbox.PasswordChar = '\0';
+                    pwdTextbox.PasswordChar = '•';
                     break;
             }
         }
@@ -39,8 +38,31 @@ namespace GradeSystem.forms
 
         private void fullyLogButton_Click(object sender, EventArgs e)
         {
-            string login = fullyLogButton.Text;
-            string pwd = fullyLogButton.Text;
+            string login = loginTextbox.Text;
+            string pwd = pwdTextbox.Text;
+
+            if (string.IsNullOrEmpty(login) && string.IsNullOrEmpty(pwd))
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "Введите логин и пароль";
+
+            }
+            else if (string.IsNullOrEmpty(login))
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "Введите логин";
+            }
+            else if (string.IsNullOrEmpty(pwd))
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "Введите пароль";
+            }
+            else
+            {
+                errorLabel.ForeColor = Color.IndianRed;
+                errorLabel.Text = "Введен неверный логин или пароль";
+
+            }
 
         }
 
@@ -49,6 +71,12 @@ namespace GradeSystem.forms
             PwdShowHide(pwdShowCheckbox);
         }
 
-        
+        private void regButton_Click(object sender, EventArgs e)
+        {
+            regForm1 regForm1 = new regForm1();
+            this.Hide();
+            regForm1.Show();
+
+        }
     }
 }
