@@ -145,13 +145,14 @@ namespace GradeSystem.forms
             // 
             // patronymicCheckBox
             // 
+            this.patronymicCheckBox.AutoSize = true;
             this.patronymicCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.patronymicCheckBox.FlatAppearance.BorderSize = 0;
             this.patronymicCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.patronymicCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
             this.patronymicCheckBox.Location = new System.Drawing.Point(52, 390);
             this.patronymicCheckBox.Name = "patronymicCheckBox";
-            this.patronymicCheckBox.Size = new System.Drawing.Size(278, 21);
+            this.patronymicCheckBox.Size = new System.Drawing.Size(104, 21);
             this.patronymicCheckBox.TabIndex = 12;
             this.patronymicCheckBox.Text = "Нет отчества";
             this.patronymicCheckBox.UseVisualStyleBackColor = true;
