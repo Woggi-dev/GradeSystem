@@ -19,8 +19,7 @@ namespace GradeSystem.forms
             InitializeComponent();
         }
 
-
-        private void DataValidation(Label errorLabel, string input, string obj, ref bool isValid)
+        static private void DataValidation(Label errorLabel, string input, string obj, ref bool isValid)
         {
             if (string.IsNullOrEmpty(input))
             {
@@ -70,7 +69,6 @@ namespace GradeSystem.forms
             errorLabel.Text = $"✔";
             errorLabel.Visible = true;
             isValid = true;
-
         }
         private void logButton_Click(object sender, EventArgs e)
         {
@@ -118,9 +116,9 @@ namespace GradeSystem.forms
                 case true:
                     errorLabelPatronymic.Text = "🔒";
                     errorLabelPatronymic.ForeColor = Color.Gray;
-                    patronymicTextbox.Text = "";
                     patronymicTextbox.Enabled = false;
                     patronymicTextbox.BackColor = Color.FromArgb(224, 224, 224);
+                    patronymicTextbox.Text = "";
                     break;
                 default:
                     errorLabelPatronymic.Text = "Заполните поле";
@@ -135,14 +133,14 @@ namespace GradeSystem.forms
         private void surnameTextbox_TextChanged(object sender, EventArgs e)
         {
             DataValidation(errorLabelSurname, surnameTextbox.Text, "Фамилия", ref isSurnameValid);
-
         }
 
         private void patronymicTextbox_TextChanged(object sender, EventArgs e)
         {
-            DataValidation(errorLabelPatronymic, patronymicTextbox.Text, "Отчество", ref isPatronymicValid);
-
-
+            if (patronymicTextbox.Enabled)
+            {
+                DataValidation(errorLabelPatronymic, patronymicTextbox.Text, "Отчество", ref isPatronymicValid);
+            }
         }
 
     }
