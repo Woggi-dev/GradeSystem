@@ -13,12 +13,65 @@ namespace GradeSystem.forms
     public partial class regForm1 : Form
     {
         homePageForm homePageForm = new homePageForm();
+        bool isNameValid, isSurnameValid, isPatronymicValid;
         public regForm1()
         {
             InitializeComponent();
         }
 
 
+        private void DataValidation(Label errorLabel, string input, string obj, ref bool isValid)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                isValid = false;
+                errorLabel.ForeColor = Color.Khaki;
+                errorLabel.Visible = true;
+                errorLabel.Text = $"Заполните поле";
+                return;
+            }
+
+            foreach (char c in input)
+            {
+                if (char.IsDigit(c))
+                {
+                    isValid = false;
+                    errorLabel.ForeColor = Color.IndianRed;
+                    errorLabel.Visible = true;
+                    errorLabel.Text = $"{obj} содержит цифры";
+                    return;
+                }
+                if (c == ' ')
+                {
+                    isValid = false;
+                    errorLabel.ForeColor = Color.IndianRed;
+                    errorLabel.Visible = true;
+                    errorLabel.Text = $"{obj} содержит пробелы";
+                    return;
+                }
+                if (!char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c))
+                {
+                    isValid = false;
+                    errorLabel.ForeColor = Color.IndianRed;
+                    errorLabel.Visible = true;
+                    errorLabel.Text = $"{obj} содержит спец. символы";
+                    return;
+                }
+                if (!(c >= '\u0400' && c <= '\u04FF'))
+                {
+                    isValid = false;
+                    errorLabel.ForeColor = Color.IndianRed;
+                    errorLabel.Visible = true;
+                    errorLabel.Text = $"{obj} не содержит кирилицу";
+                    return;
+                }
+            }
+            errorLabel.ForeColor = Color.Green;
+            errorLabel.Text = $"✔";
+            errorLabel.Visible = true;
+            isValid = true;
+
+        }
         private void logButton_Click(object sender, EventArgs e)
         {
             logForm logForm = new logForm();
@@ -28,9 +81,21 @@ namespace GradeSystem.forms
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            regForm2 regForm2 = new regForm2();
-            this.Hide();
-            regForm2.Show();
+            string surname = nameTextbox.Text;
+            string name = nameTextbox.Text;
+            string patronymic = nameTextbox.Text;
+
+            if (isNameValid && isSurnameValid && isPatronymicValid)
+            {
+                
+                name = char.ToUpper(name[0]) + name.Substring(1).ToLower();
+                surname = char.ToUpper(surname[0]) + surname.Substring(1).ToLower();
+                patronymic = char.ToUpper(patronymic[0]) + patronymic.Substring(1).ToLower();
+                
+                regForm2 regForm2 = new regForm2();
+                this.Hide();
+                regForm2.Show();
+            }
         }
 
         private void homepageButton_Click(object sender, EventArgs e)
@@ -42,8 +107,40 @@ namespace GradeSystem.forms
 
         private void nameTextbox_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("123");
+            DataValidation(errorLabelName, nameTextbox.Text, "Имя", ref isNameValid);
+
         }
+
+        private void patronymicCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            switch (patronymicCheckBox.Checked)
+            {
+                case true:
+                    patronymicTextbox.Text = "";
+                    patronymicTextbox.Enabled = false;
+                    patronymicTextbox.BackColor = Color.FromArgb(224, 224, 224);
+                    errorLabelPatronymic.Visible = false;
+                    break;
+                default:
+                    patronymicTextbox.Enabled = true;
+                    patronymicTextbox.BackColor = Color.White;
+                    errorLabelPatronymic.Visible = true;
+                    break;
+            }
+        }
+
+        private void surnameTextbox_TextChanged(object sender, EventArgs e)
+        {
+            DataValidation(errorLabelSurname, surnameTextbox.Text, "Фамилия", ref isSurnameValid);
+
+        }
+
+        private void patronymicTextbox_TextChanged(object sender, EventArgs e)
+        {
+            DataValidation(errorLabelPatronymic, patronymicTextbox.Text, "Отчество", ref isPatronymicValid);
+
+        }
+
     }
 
 

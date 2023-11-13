@@ -48,8 +48,8 @@ namespace GradeSystem.forms
             this.backButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.nameTextbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pwdTextbox = new System.Windows.Forms.TextBox();
+            this.pwdAgainTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // fullyRegButton
@@ -63,14 +63,13 @@ namespace GradeSystem.forms
             this.fullyRegButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
             this.fullyRegButton.Location = new System.Drawing.Point(54, 499);
             this.fullyRegButton.Name = "fullyRegButton";
-            this.fullyRegButton.Size = new System.Drawing.Size(265, 36);
+            this.fullyRegButton.Size = new System.Drawing.Size(275, 36);
             this.fullyRegButton.TabIndex = 31;
             this.fullyRegButton.Text = "Зарегистрироваться";
             this.fullyRegButton.UseVisualStyleBackColor = false;
             // 
             // pwdShowCheckbox
             // 
-            this.pwdShowCheckbox.AutoSize = true;
             this.pwdShowCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pwdShowCheckbox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.pwdShowCheckbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
@@ -87,7 +86,7 @@ namespace GradeSystem.forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.label5.Location = new System.Drawing.Point(51, 226);
+            this.label5.Location = new System.Drawing.Point(50, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 20);
             this.label5.TabIndex = 24;
@@ -110,18 +109,17 @@ namespace GradeSystem.forms
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
             this.label2.Location = new System.Drawing.Point(51, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 47);
+            this.label2.Size = new System.Drawing.Size(272, 47);
             this.label2.TabIndex = 19;
             this.label2.Text = "Придумайте пароль для доступа к личному кабинету";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.label1.Location = new System.Drawing.Point(47, 47);
+            this.label1.Location = new System.Drawing.Point(44, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 40);
+            this.label1.Size = new System.Drawing.Size(278, 40);
             this.label1.TabIndex = 18;
             this.label1.Text = "Безопасность";
             // 
@@ -220,9 +218,9 @@ namespace GradeSystem.forms
             // 
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.label12.Location = new System.Drawing.Point(55, 446);
+            this.label12.Location = new System.Drawing.Point(54, 446);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(269, 50);
+            this.label12.Size = new System.Drawing.Size(275, 50);
             this.label12.TabIndex = 46;
             this.label12.Text = "Регистрируясь, вы соглашаетесь с Условиями предоставления услуг и Политикой конфи" +
     "денциальности";
@@ -241,6 +239,7 @@ namespace GradeSystem.forms
             this.logButton.TabIndex = 47;
             this.logButton.Text = "Войти";
             this.logButton.UseVisualStyleBackColor = true;
+            this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
             // backButton
             // 
@@ -256,48 +255,51 @@ namespace GradeSystem.forms
             this.backButton.TabIndex = 48;
             this.backButton.Text = "Вернуться";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.IndianRed;
-            this.label13.Location = new System.Drawing.Point(55, 287);
+            this.label13.ForeColor = System.Drawing.Color.Khaki;
+            this.label13.Location = new System.Drawing.Point(165, 287);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(167, 15);
+            this.label13.Size = new System.Drawing.Size(164, 15);
             this.label13.TabIndex = 49;
-            this.label13.Text = "Неверный формат телефона\r\n\r\n";
+            this.label13.Text = "Заполните поле";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.IndianRed;
-            this.label14.Location = new System.Drawing.Point(52, 201);
+            this.label14.ForeColor = System.Drawing.Color.Khaki;
+            this.label14.Location = new System.Drawing.Point(162, 201);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(167, 16);
             this.label14.TabIndex = 50;
-            this.label14.Text = "Неверный формат телефона\r\n\r\n";
+            this.label14.Text = "Заполните поле";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // nameTextbox
+            // pwdTextbox
             // 
-            this.nameTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.nameTextbox.Location = new System.Drawing.Point(54, 163);
-            this.nameTextbox.Multiline = true;
-            this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.PasswordChar = '•';
-            this.nameTextbox.Size = new System.Drawing.Size(275, 35);
-            this.nameTextbox.TabIndex = 51;
+            this.pwdTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.pwdTextbox.Location = new System.Drawing.Point(54, 163);
+            this.pwdTextbox.MaxLength = 50;
+            this.pwdTextbox.Multiline = true;
+            this.pwdTextbox.Name = "pwdTextbox";
+            this.pwdTextbox.PasswordChar = '•';
+            this.pwdTextbox.Size = new System.Drawing.Size(275, 35);
+            this.pwdTextbox.TabIndex = 51;
             // 
-            // textBox1
+            // pwdAgainTextbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(54, 249);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '•';
-            this.textBox1.Size = new System.Drawing.Size(275, 35);
-            this.textBox1.TabIndex = 53;
+            this.pwdAgainTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.pwdAgainTextbox.Location = new System.Drawing.Point(54, 249);
+            this.pwdAgainTextbox.MaxLength = 50;
+            this.pwdAgainTextbox.Multiline = true;
+            this.pwdAgainTextbox.Name = "pwdAgainTextbox";
+            this.pwdAgainTextbox.PasswordChar = '•';
+            this.pwdAgainTextbox.Size = new System.Drawing.Size(275, 35);
+            this.pwdAgainTextbox.TabIndex = 53;
             // 
             // regForm3
             // 
@@ -305,8 +307,8 @@ namespace GradeSystem.forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(386, 609);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.nameTextbox);
+            this.Controls.Add(this.pwdAgainTextbox);
+            this.Controls.Add(this.pwdTextbox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.backButton);
@@ -358,7 +360,7 @@ namespace GradeSystem.forms
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox nameTextbox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pwdTextbox;
+        private System.Windows.Forms.TextBox pwdAgainTextbox;
     }
 }

@@ -33,9 +33,9 @@ namespace GradeSystem.forms
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            regForm2 regForm2 = new regForm2();
+            regForm1 regForm1 = new regForm1();
             this.Hide();
-            regForm2.Show();
+            regForm1.Show();
         }
 
         private void homepageButton_Click(object sender, EventArgs e)
