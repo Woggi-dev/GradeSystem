@@ -52,11 +52,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\aboutUsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\aboutUsForm.Designer.cs">
+      <DependentUpon>aboutUsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\conditionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\conditionsForm.Designer.cs">
+      <DependentUpon>conditionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contactForm.Designer.cs">
+      <DependentUpon>contactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\logForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\logForm.Designer.cs">
       <DependentUpon>logForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\privacyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\privacyForm.Designer.cs">
+      <DependentUpon>privacyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\regForm1.cs">
       <SubType>Form</SubType>
@@ -92,8 +116,20 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="forms\aboutUsForm.resx">
+      <DependentUpon>aboutUsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\conditionsForm.resx">
+      <DependentUpon>conditionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contactForm.resx">
+      <DependentUpon>contactForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\logForm.resx">
       <DependentUpon>logForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\privacyForm.resx">
+      <DependentUpon>privacyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\regForm1.resx">
       <DependentUpon>regForm1.cs</DependentUpon>

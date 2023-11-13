@@ -39,12 +39,12 @@ namespace GradeSystem.forms
             this.mainTitleMvn = new System.Windows.Forms.Label();
             this.logButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.aboutButton = new System.Windows.Forms.Label();
             this.privacyButton = new System.Windows.Forms.Label();
             this.conditionsButton = new System.Windows.Forms.Label();
             this.versionButton = new System.Windows.Forms.Label();
             this.contactButton = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -178,17 +178,6 @@ namespace GradeSystem.forms
             this.label7.Text = "Уже зарегистрированы?";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::GradeSystem.Properties.Resources.HomePage;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 132);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(441, 330);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // aboutButton
             // 
             this.aboutButton.AutoSize = true;
@@ -201,6 +190,7 @@ namespace GradeSystem.forms
             this.aboutButton.TabIndex = 6;
             this.aboutButton.Text = "О нас";
             this.aboutButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // privacyButton
             // 
@@ -214,6 +204,7 @@ namespace GradeSystem.forms
             this.privacyButton.TabIndex = 7;
             this.privacyButton.Text = "Политика конфиденциальности";
             this.privacyButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.privacyButton.Click += new System.EventHandler(this.privacyButton_Click);
             // 
             // conditionsButton
             // 
@@ -227,11 +218,12 @@ namespace GradeSystem.forms
             this.conditionsButton.TabIndex = 8;
             this.conditionsButton.Text = "Условия предоставления услуг";
             this.conditionsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.conditionsButton.Click += new System.EventHandler(this.conditionsButton_Click);
             // 
             // versionButton
             // 
             this.versionButton.AutoSize = true;
-            this.versionButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.versionButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.versionButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.versionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.versionButton.Location = new System.Drawing.Point(1053, 589);
@@ -253,6 +245,18 @@ namespace GradeSystem.forms
             this.contactButton.TabIndex = 10;
             this.contactButton.Text = "Связаться с нами";
             this.contactButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.contactButton.Click += new System.EventHandler(this.contactButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::GradeSystem.Properties.Resources.HomePage;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 330);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // homePageForm
             // 
