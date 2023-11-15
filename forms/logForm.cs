@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GradeSystem.scripts;
 
 namespace GradeSystem.forms
 {
     public partial class logForm : Form
     {
+
+        readonly Database dbConnection;
+
         private void OpenForm(Form form)
         {
             this.Hide();
@@ -20,6 +25,7 @@ namespace GradeSystem.forms
         public logForm()
         {
             InitializeComponent();
+            dbConnection = new Database();
         }
         // Метод показать/скрыть пароль
         public void PwdShowHide(TextBox textboxName, CheckBox checkboxName)
@@ -59,12 +65,73 @@ namespace GradeSystem.forms
             {
                 errorLabel.ForeColor = Color.IndianRed;
                 errorLabel.Text = "Введен неверный логин или пароль";
+
             }
+
+
+            //// SQL-запрос для проверки соответствия данных
+            //string sqlQuery = "SELECT * FROM YourTable WHERE Username = @Username AND Password = @Password";
+
+            //// Создание объекта SqlCommand
+            //using (SqlCommand command = dbConnection.CreateCommand())
+            //{
+            //    command.CommandText = sqlQuery;
+
+            //    // Добавление параметров к SQL-запросу
+            //    command.Parameters.AddWithValue("@login", login);
+            //    command.Parameters.AddWithValue("@pass", pwd);
+
+            //    try
+            //    {
+            //        // Открытие подключения
+            //        dbConnection.Open();
+
+            //        // Выполнение SQL-запроса
+            //        using (SqlDataReader reader = command.ExecuteReader())
+            //        {
+            //            // Если запись найдена, переход на новую форму
+            //            if (reader.Read())
+            //            {
+            //                MessageBox.Show("Вход выполнен успешно!");
+            //                // Перехлд на mainForm
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Неверное имя пользователя или пароль!");
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show($"Ошибка: {ex.Message}");
+            //    }
+            //    finally
+            //    {
+            //        // Закрытие подключения
+            //        dbConnection.Close();
+            //    }
+            //}
+
+        }
+
+        private void pwdShowCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            PwdShowHide(pwdShowCheckbox);
         }
         // Обработчик события кнопки "Зарегистрироваться" - выход на форму RegForm1
         private void regButton_Click(object sender, EventArgs e)
         {
             OpenForm(new regForm1());
+        }
+
+        private void logForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginTextbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
