@@ -12,71 +12,59 @@ namespace GradeSystem.forms
 {
     public partial class logForm : Form
     {
+        private void OpenForm(Form form)
+        {
+            this.Hide();
+            form.Show();
+        }
         public logForm()
         {
             InitializeComponent();
         }
-        public void PwdShowHide(CheckBox checkBoxName)
+        // Метод показать/скрыть пароль
+        public void PwdShowHide(TextBox textboxName, CheckBox checkboxName)
         {
-            switch (pwdShowCheckbox.Checked)
-            {
-                case true:
-                    pwdTextbox.PasswordChar = '\0';
-                    break;
-                default:
-                    pwdTextbox.PasswordChar = '•';
-                    break;
-            }
+            // Если галочка "Показать пароль" стоит (checkboxName.Checked = true) - показать пароль, иначе спрятать
+            textboxName.PasswordChar = checkboxName.Checked ? '\0' : '•';
         }
 
+        // Обработчик события нажатия крестика - выход на главную страницу
         private void homepageButton_Click(object sender, EventArgs e)
         {
-            homePageForm homePageForm = new homePageForm();
-            this.Hide();
-            homePageForm.Show();
+            OpenForm(new homePageForm()); 
         }
 
+        // Обработчик события CheckBox "Показать пароль"
+        private void pwdShowCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            // Вызов функции "Показать/скрыть пароль"
+            PwdShowHide(pwdTextbox, pwdShowCheckbox);
+        }
+
+        // Обработчик события нажатия кнопки "Войти" - выход на основную страницу
         private void fullyLogButton_Click(object sender, EventArgs e)
         {
+            // Сохраняем логин и пароль пользователя
             string login = loginTextbox.Text;
             string pwd = pwdTextbox.Text;
 
-            if (string.IsNullOrEmpty(login) && string.IsNullOrEmpty(pwd))
+            // Если логин или пароль пустой - вывести errorLabel.Text пользователю
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(pwd))
             {
                 errorLabel.Visible = true;
-                errorLabel.Text = "Введите логин и пароль";
-
+                errorLabel.Text = "Введите логин или пароль";
             }
-            else if (string.IsNullOrEmpty(login))
-            {
-                errorLabel.Visible = true;
-                errorLabel.Text = "Введите логин";
-            }
-            else if (string.IsNullOrEmpty(pwd))
-            {
-                errorLabel.Visible = true;
-                errorLabel.Text = "Введите пароль";
-            }
+            // Иначе вывести ошибку errorLabel.Text
             else
             {
                 errorLabel.ForeColor = Color.IndianRed;
                 errorLabel.Text = "Введен неверный логин или пароль";
-
             }
-
         }
-
-        private void pwdShowCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
-            PwdShowHide(pwdShowCheckbox);
-        }
-
+        // Обработчик события кнопки "Зарегистрироваться" - выход на форму RegForm1
         private void regButton_Click(object sender, EventArgs e)
         {
-            regForm1 regForm1 = new regForm1();
-            this.Hide();
-            regForm1.Show();
-
+            OpenForm(new regForm1());
         }
     }
 }

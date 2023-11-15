@@ -255,7 +255,7 @@ namespace GradeSystem.forms
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(118, 38);
             this.backButton.TabIndex = 48;
-            this.backButton.Text = "Вернуться";
+            this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 

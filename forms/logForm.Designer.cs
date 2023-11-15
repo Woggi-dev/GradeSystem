@@ -197,7 +197,7 @@ namespace GradeSystem.forms
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(274, 25);
             this.errorLabel.TabIndex = 37;
-            this.errorLabel.Text = "Введен некорректный логин или пароль.";
+            this.errorLabel.Text = "errorLabel";
             this.errorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.errorLabel.Visible = false;
             // 
