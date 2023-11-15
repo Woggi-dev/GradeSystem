@@ -144,7 +144,7 @@ namespace GradeSystem.forms
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(110, 38);
             this.backButton.TabIndex = 38;
-            this.backButton.Text = "Вернуться";
+            this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -190,7 +190,6 @@ namespace GradeSystem.forms
             this.phoneTextbox.Name = "phoneTextbox";
             this.phoneTextbox.Size = new System.Drawing.Size(276, 35);
             this.phoneTextbox.TabIndex = 41;
-            this.phoneTextbox.Text = "+7 ";
             this.phoneTextbox.TextChanged += new System.EventHandler(this.phoneTextbox_TextChanged);
             // 
             // emailTextbox

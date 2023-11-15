@@ -93,7 +93,7 @@ namespace GradeSystem.forms
             // 
             // nameTextbox
             // 
-            this.nameTextbox.BackColor = System.Drawing.Color.Azure;
+            this.nameTextbox.BackColor = System.Drawing.SystemColors.Window;
             this.nameTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.nameTextbox.Location = new System.Drawing.Point(52, 240);
             this.nameTextbox.Multiline = true;
@@ -125,6 +125,7 @@ namespace GradeSystem.forms
             // patronymicTextbox
             // 
             this.patronymicTextbox.BackColor = System.Drawing.Color.White;
+            this.patronymicTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.patronymicTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.patronymicTextbox.Location = new System.Drawing.Point(54, 329);
             this.patronymicTextbox.Multiline = true;

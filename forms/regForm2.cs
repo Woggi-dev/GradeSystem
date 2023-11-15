@@ -13,80 +13,118 @@ namespace GradeSystem.forms
 {
     public partial class regForm2 : Form
     {
-        bool isPhoneValid, isEmailValid;
+        // Приватные статические булевые переменные (принадлежащие классу) для проверки данных в обработчике событий nextButton_Click
+        private static bool isPhoneValid, isEmailValid;
         public regForm2()
         {
             InitializeComponent();
         }
 
+        // Функция открыть новую форму и скрыть старую
+        public void OpenForm(Form form)
+        {
+            this.Hide();
+            form.Show();
+        }
+
+        // Функция для установки параметров для надписей (labels)
+        private void SetValidationProperties(Label errorLabel, Color labelForeColor, string text)
+        {
+            // Устанавливаем текст и цвет
+            errorLabel.ForeColor = labelForeColor;
+            errorLabel.Text = text;
+        }
+
+        // Обработчик события нажатия кнопки "Войти" - перейти на logForm
         private void logButton_Click(object sender, EventArgs e)
         {
-            logForm logForm = new logForm();
-            this.Hide();
-            logForm.Show();
+            OpenForm(new logForm());
         }
 
+        // Обработчик события нажатия кнопки "Далее" - переход на regForm2
         private void nextButton_Click(object sender, EventArgs e)
         {
-            regForm3 regForm3 = new regForm3();
-            this.Hide();
-            regForm3.Show();
+            if (isPhoneValid && isEmailValid)
+            {
+                OpenForm(new regForm3());
+            }
         }
-
+        // Обработчик события нажатия кнопки "Назад" - переход на regForm1
         private void backButton_Click(object sender, EventArgs e)
         {
-            regForm1 regForm1 = new regForm1();
-            this.Hide();
-            regForm1.Show();
+            OpenForm(new regForm1());
         }
 
+        // Обработчик события нажатия кнопки "Крестик" - переход на главную страницу
         private void homepageButton_Click(object sender, EventArgs e)
         {
-            homePageForm homePageForm = new homePageForm();
-            this.Hide();
-            homePageForm.Show();
+            OpenForm(new homePageForm());
         }
 
+        // Обработчик события написания текстовых полей "Телефона", "Почты" и валидация данных
         private void phoneTextbox_TextChanged(object sender, EventArgs e)
         {
+            // Сохраняем номер телефона
             string phoneNumber = phoneTextbox.Text;
-            string errorPhoneNumberMessage = "Неверный формат телефона";
+
+            // Проверка начинается ли номер телефона с +79
+            bool isItStarts79 = phoneNumber.StartsWith("+79");
+
+            // Если поле телефона пустое - установить свойства надписей ошибки и выйти из функции
             if (string.IsNullOrEmpty(phoneNumber))
             {
-                errorLabelPhone.ForeColor = Color.Khaki;
-                errorLabelPhone.Text = $"Заполните поле";
+                SetValidationProperties(errorLabelPhone, Color.Khaki, "Заполните поле");
                 return;
             }
-            else if (!(phoneNumber.StartsWith("+79") || phoneNumber.StartsWith("89")))
+            
+            // Если начинается, изменить длину текстового поля телефона на 12, иначе на 11
+            if (isItStarts79)
             {
-                errorLabelPhone.ForeColor = Color.IndianRed;
-                errorLabelPhone.Text = errorPhoneNumberMessage;
+                phoneTextbox.MaxLength = 12;
+            }
+            else
+            {
+                phoneTextbox.MaxLength = 11;
+
+            }
+            /* Если поле телефона начинается с +7, 89, символы являются цифрами и количество символов + больше 2,
+            Если поле телефона пустое - установить свойства надписей ошибки и выйти из функции */
+            if (!(isItStarts79 || phoneNumber.StartsWith("89"))
+                || phoneNumber.Any(c => (!char.IsDigit(c) && c != '+')) || phoneNumber.Count(c => c == '+') >= 2
+                || phoneNumber.Length < 11)
+            {
+                SetValidationProperties(errorLabelPhone, Color.IndianRed, "Неверный формат телефона");
                 return;
             }
 
-            foreach (char c in phoneNumber)
-            {
-                if ((!char.IsLetterOrDigit(c) || c == ' ') && c != '+')
-                {
-                    errorLabelPhone.ForeColor = Color.IndianRed;
-                    errorLabelPhone.Text = errorPhoneNumberMessage;
-                    return;
-                }
-            }
-            errorLabelPhone.ForeColor = Color.Green;
-            errorLabelPhone.Text = $"✔";
+            // В случае прохода всех условий - установить маркеры успешности к надписям ошибки и поменять переменную на true - валидно
+            SetValidationProperties(errorLabelPhone, Color.Green, "✔");
+            isPhoneValid = true;
         }
 
         private void emailTextbox_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(emailTextbox.Text, @"\b(gmail.com|mail.ru|inbox.ru|yandex.ru)$"))
+            // Сохраняем почту
+            string email = emailTextbox.Text;
+
+            // Если поле почты пустое - установить свойства надписей ошибки и выйти из функции
+            if (string.IsNullOrEmpty(email))
             {
-                errorLabelEmail.ForeColor = Color.IndianRed;
-                errorLabelEmail.Text = "Неверный формат эл.почты";
+                SetValidationProperties(errorLabelEmail, Color.Khaki, "Заполните поле");
                 return;
             }
-            errorLabelEmail.ForeColor = Color.Green;
-            errorLabelEmail.Text = $"✔";
+
+            // Если почта валидна (готовая функция) - установить свойства надписей ошибки и выйти из функции
+            if (!Regex.IsMatch(email, @"\b(gmail.com|mail.ru|inbox.ru|yandex.ru)$"))
+            {
+                SetValidationProperties(errorLabelEmail, Color.IndianRed, "Неверный формат эл.почты");
+                return;
+            }
+
+            // В случае прохода всех условий - установить маркеры успешности к надписям ошибки и поменять переменную на true - валидно
+            SetValidationProperties(errorLabelEmail, Color.Green, "✔");
+            isEmailValid = true;
+
         }
     }
 }
