@@ -114,24 +114,11 @@ namespace GradeSystem.forms
 
         }
 
-        private void pwdShowCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
-            PwdShowHide(pwdShowCheckbox);
-        }
         // Обработчик события кнопки "Зарегистрироваться" - выход на форму RegForm1
         private void regButton_Click(object sender, EventArgs e)
         {
             OpenForm(new regForm1());
         }
 
-        private void logForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

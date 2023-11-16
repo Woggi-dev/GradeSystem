@@ -12,14 +12,20 @@ namespace GradeSystem.forms
 {
     public partial class aboutUsForm : Form
     {
+        // Создаем ссылку на класс homepage
+        homePageForm homePageForm;
         public aboutUsForm()
         {
             InitializeComponent();
+            // Создаем экземпляр класса homepage
+            homePageForm = new homePageForm();
+
         }
 
+        // Обработчик события на кнопку "На главный экран"
         private void homeButton_Click(object sender, EventArgs e)
         {
-            homePageForm homePageForm = new homePageForm();
+
             this.Hide();
             homePageForm.Show();
         }

@@ -36,20 +36,20 @@ namespace GradeSystem.forms
             form.Show();
         }
 
-        // Функция установить шрифт надписям (labels)
-        private void SetLabelFont(Label label)
-        {
-            label.Font = new Font(label.Font, label.Font.Style | FontStyle.Underline);
-        }
         // Обработчики события Label_MouseEnter/Leave - навести/отвести мышку от надписи
         private void Label_MouseEnter(object sender, EventArgs e)
         {
-            SetLabelFont((Label)sender);
+            // При наведении мышки на надпись сделать надпись подчеркнутым
+            Label label = (Label) sender;
+            label.Font = new Font(label.Font, label.Font.Style | FontStyle.Underline);
         }
 
         private void Label_MouseLeave(object sender, EventArgs e)
         {
-            SetLabelFont((Label)sender);
+            // При отведении мышки от надписи сделать надпись неподчеркнутой
+            Label label = (Label)sender;
+            label.Font = new Font(label.Font, label.Font.Style & ~FontStyle.Underline);
+
         }
 
         // Обработчики события Reg/Log/About/Privacy/Conditions/contactButton_Click - нажать на кнопки
