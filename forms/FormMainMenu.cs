@@ -16,7 +16,7 @@ namespace GradeSystem
         private Button currentButton;
         private Random random;
         private int tempIndex;
-        private FormMainMenu activeForm;
+        private Form activeForm;
 
         //Constructor
         public FormMainMenu()
@@ -60,8 +60,6 @@ namespace GradeSystem
         }
 
 
-        
-
         private void DisableButton()
         {
             foreach (Control previousBtn in panelMenu.Controls)
@@ -75,7 +73,21 @@ namespace GradeSystem
             }
         }
 
-        
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktopPanel.Controls.Add(childForm);
+            this.panelDesktopPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitle.Text = childForm.Text;
+        }
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -90,22 +102,22 @@ namespace GradeSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new childrenMainForm.dayForm(), sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new childrenMainForm.weekForm(), sender);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new childrenMainForm.semestrForm(), sender);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new childrenMainForm.resultsForm(), sender);
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
