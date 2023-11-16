@@ -88,15 +88,21 @@ namespace GradeSystem.forms
         {
             // При наборе текста убираем ошибочные надписи
             errorLabelPwd.Text = "";
+
             // Сохраняем пароль 
             string pwd = pwdTextbox.Text;
 
-            // Создаем массивы надписей для ошибок и проверки пароля (длина пароля, есть ли заглавные/маленькие буквы, есть ли цифры)
-            Label[] errorLabels = { errorLabelPwdLength, errorLabelPwdUpper, errorLabelPwdLower, errorLabelPwdDigits };
-            bool[] validations = { pwd.Length > 8, pwd.Any(char.IsUpper), pwd.Any(char.IsLower), pwd.Any(char.IsDigit) };
+            // Создаем массивы надписей для ошибок, запрещенные символы и проверки пароля (длина пароля, есть ли заглавные/маленькие буквы, есть ли цифры)
+            char[] forbiddenChars = { ' ', '"', '\'', '`', ';', ':'};
+            Label[] errorLabels = { errorLabelPwdLength, errorLabelPwdUpper, errorLabelPwdLower, errorLabelPwdDigits, errorLabelPwdSpecChars };
+            bool[] validations = { pwd.Length > 8, pwd.Any(char.IsUpper), pwd.Any(char.IsLower), pwd.Any(char.IsDigit),
+            !pwd.Any(c => forbiddenChars.Contains(c))};
+
+            // Общая длина всех массивов
+            const int generalArraysLength = 5;
 
             // Цикл для изменения состояния требований пароля (если требования соблюдено - зеленый цвет, галочка, иначе - красный цвет, крестик)
-            for (int i = 0; i < validations.Length; i++)
+            for (int i = 0; i < generalArraysLength; i++)
             {
                 // Если из массива мы берем true - зеленый цвет и галочка, иначе красный и крестик
                 errorLabels[i].ForeColor = validations[i] ? Color.Green : Color.IndianRed;
