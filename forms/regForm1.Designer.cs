@@ -104,6 +104,7 @@ namespace GradeSystem.forms
             // 
             // surnameTextbox
             // 
+            this.surnameTextbox.BackColor = System.Drawing.Color.White;
             this.surnameTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.surnameTextbox.Location = new System.Drawing.Point(52, 157);
             this.surnameTextbox.Multiline = true;
@@ -225,7 +226,7 @@ namespace GradeSystem.forms
             this.errorLabelName.Name = "errorLabelName";
             this.errorLabelName.Size = new System.Drawing.Size(275, 15);
             this.errorLabelName.TabIndex = 38;
-            this.errorLabelName.Text = "errorLabel";
+            this.errorLabelName.Text = "Заполните поле";
             this.errorLabelName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // errorLabelSurname
@@ -236,7 +237,7 @@ namespace GradeSystem.forms
             this.errorLabelSurname.Name = "errorLabelSurname";
             this.errorLabelSurname.Size = new System.Drawing.Size(275, 15);
             this.errorLabelSurname.TabIndex = 39;
-            this.errorLabelSurname.Text = "errorLabel";
+            this.errorLabelSurname.Text = "Заполните поле";
             this.errorLabelSurname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // errorLabelPatronymic
@@ -247,7 +248,7 @@ namespace GradeSystem.forms
             this.errorLabelPatronymic.Name = "errorLabelPatronymic";
             this.errorLabelPatronymic.Size = new System.Drawing.Size(275, 15);
             this.errorLabelPatronymic.TabIndex = 40;
-            this.errorLabelPatronymic.Text = "errorLabel";
+            this.errorLabelPatronymic.Text = "Заполните поле";
             this.errorLabelPatronymic.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // regForm1
