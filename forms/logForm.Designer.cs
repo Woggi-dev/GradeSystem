@@ -110,7 +110,6 @@ namespace GradeSystem.forms
             this.loginTextbox.Name = "loginTextbox";
             this.loginTextbox.Size = new System.Drawing.Size(364, 42);
             this.loginTextbox.TabIndex = 23;
-            this.loginTextbox.TextChanged += new System.EventHandler(this.loginTextbox_TextChanged);
             // 
             // label4
             // 
@@ -239,7 +238,6 @@ namespace GradeSystem.forms
             this.MinimizeBox = false;
             this.Name = "logForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.logForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
