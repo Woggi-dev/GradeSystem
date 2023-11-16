@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="childrenMainForm\dayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\dayForm.Designer.cs">
+      <DependentUpon>dayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="childrenMainForm\resultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\resultsForm.Designer.cs">
+      <DependentUpon>resultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="childrenMainForm\semestrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\semestrForm.Designer.cs">
+      <DependentUpon>semestrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="childrenMainForm\weekForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\weekForm.Designer.cs">
+      <DependentUpon>weekForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\aboutUsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +137,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Grade_SystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="forms\FormMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormMainMenu.Designer.cs">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,9 +153,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="childrenMainForm\dayForm.resx">
+      <DependentUpon>dayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\aboutUsForm.resx">
       <DependentUpon>aboutUsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\regForm3.resx">
       <DependentUpon>regForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormMainMenu.resx">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
