@@ -167,7 +167,7 @@ namespace GradeSystem.forms
             this.errorLabelPhone.Name = "errorLabelPhone";
             this.errorLabelPhone.Size = new System.Drawing.Size(167, 15);
             this.errorLabelPhone.TabIndex = 39;
-            this.errorLabelPhone.Text = "Errorlabel";
+            this.errorLabelPhone.Text = "Заполните поле";
             this.errorLabelPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // errorLabelEmail
@@ -178,7 +178,7 @@ namespace GradeSystem.forms
             this.errorLabelEmail.Name = "errorLabelEmail";
             this.errorLabelEmail.Size = new System.Drawing.Size(167, 15);
             this.errorLabelEmail.TabIndex = 40;
-            this.errorLabelEmail.Text = "Errorlabel";
+            this.errorLabelEmail.Text = "Заполните поле";
             this.errorLabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // phoneTextbox
