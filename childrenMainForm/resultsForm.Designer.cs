@@ -1,7 +1,7 @@
 ﻿
-namespace GradeSystem.mainFroms
+namespace GradeSystem.childrenMainForm
 {
-    partial class semestrForm1
+    partial class resultsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace GradeSystem.mainFroms
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "semestrForm1";
+            this.Text = "resultsForm";
         }
 
         #endregion

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace GradeSystem
 {
-    public partial class mainForm :Form
+    public partial class FormMainMenu :Form
     {
         //Fields
         private Button currentButton;
         private Random random;
         private int tempIndex;
-        private mainForm activeForm;
+        private FormMainMenu activeForm;
 
         //Constructor
-        public mainForm()
+        public FormMainMenu()
         {
             InitializeComponent();
             random = new Random();
@@ -52,11 +52,15 @@ namespace GradeSystem
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    panelTitleBar.BackColor = color;
+                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     
                 }
             }
         }
 
+
+        
 
         private void DisableButton()
         {
@@ -70,6 +74,8 @@ namespace GradeSystem
                 }
             }
         }
+
+        
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -100,6 +106,21 @@ namespace GradeSystem
         private void button4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace GradeSystem
 {
-    partial class mainForm
+    partial class FormMainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -124,6 +124,7 @@ namespace GradeSystem
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 80);
             this.panelLogo.TabIndex = 1;
+            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // panel1
             // 
@@ -141,6 +142,7 @@ namespace GradeSystem
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(580, 80);
             this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             // 
             // lblTitle
             // 
@@ -153,6 +155,7 @@ namespace GradeSystem
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "HOME";
             this.lblTitle.Visible = false;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // panelDesktopPanel
             // 
@@ -163,7 +166,7 @@ namespace GradeSystem
             this.panelDesktopPanel.TabIndex = 2;
             this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
             // 
-            // mainForm
+            // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,8 +174,8 @@ namespace GradeSystem
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Name = "mainForm";
-            this.Text = "mainForm";
+            this.Name = "FormMainMenu";
+            this.Text = "FormMainMenu";
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();

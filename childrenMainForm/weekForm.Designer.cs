@@ -1,7 +1,7 @@
 ﻿
-namespace GradeSystem.Froms
+namespace GradeSystem.childrenMainForm
 {
-    partial class DayForm
+    partial class weekForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace GradeSystem.Froms
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "DayForm";
+            this.Text = "weekForm";
         }
 
         #endregion

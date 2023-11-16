@@ -93,7 +93,7 @@ namespace GradeSystem.forms
             //            if (reader.Read())
             //            {
             //                MessageBox.Show("Вход выполнен успешно!");
-            //                // Перехлд на mainForm
+            //                // Перехлд на FormMainMenu
             //            }
             //            else
             //            {

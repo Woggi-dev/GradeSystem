@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeSystem.Froms
+namespace GradeSystem.childrenMainForm
 {
-    public partial class DayForm : Form
+    public partial class dayForm : Form
     {
-        public DayForm()
+        public dayForm()
         {
             InitializeComponent();
         }

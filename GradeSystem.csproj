@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="childrenMainForm\dayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\dayForm.Designer.cs">
+      <DependentUpon>dayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="childrenMainForm\resultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\resultsForm.Designer.cs">
+      <DependentUpon>resultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="childrenMainForm\semestrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\semestrForm.Designer.cs">
+      <DependentUpon>semestrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="childrenMainForm\weekForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="childrenMainForm\weekForm.Designer.cs">
+      <DependentUpon>weekForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\aboutUsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,40 +132,16 @@
     <Compile Include="forms\regForm3.Designer.cs">
       <DependentUpon>regForm3.cs</DependentUpon>
     </Compile>
-    <Compile Include="mainFroms\dayForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainFroms\dayForm.Designer.cs">
-      <DependentUpon>dayForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Grade_SystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Grade_SystemDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="forms\mainForm.cs">
+    <Compile Include="forms\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\mainForm.Designer.cs">
-      <DependentUpon>mainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mainFroms\resultsForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainFroms\resultsForm1.Designer.cs">
-      <DependentUpon>resultsForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mainFroms\semestrForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainFroms\semestrForm1.Designer.cs">
-      <DependentUpon>semestrForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mainFroms\weekForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainFroms\weekForm.Designer.cs">
-      <DependentUpon>weekForm.cs</DependentUpon>
+    <Compile Include="forms\FormMainMenu.Designer.cs">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -184,8 +184,8 @@
     <EmbeddedResource Include="forms\regForm3.resx">
       <DependentUpon>regForm3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\mainForm.resx">
-      <DependentUpon>mainForm.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FormMainMenu.resx">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
