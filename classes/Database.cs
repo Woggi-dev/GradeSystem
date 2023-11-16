@@ -9,7 +9,7 @@ namespace GradeSystem.scripts
 {
     class Database
     {
-        static void Main()
+        static void Connect()
         {
             // Строка подключения
             string connectionString = "Data Source=your_server;Initial Catalog=your_database;User ID=your_username;Password=your_password";
