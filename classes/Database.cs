@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,31 +8,94 @@ using System.Threading.Tasks;
 
 namespace GradeSystem.scripts
 {
-    class Database
+    public class Database
     {
-        public static void Connect()
-        {
-            // Строка подключения
-            string sqlConnection = @"Data Source=DESKTOP-O4H69NN\SQLEXPRESS;Initial Catalog=Grade_System;Integrated Security=True";
+        private static string connectionString;
 
-            // Создание объекта SqlConnection
-            using (SqlConnection connection = new SqlConnection(sqlConnection))
+        public Database()
+        {
+            connectionString = @"Data Source=DESKTOP-O4H69NN\SQLEXPRESS;Initial Catalog=Grade_System;Integrated Security=True";
+        }
+
+        // Open a connection and return it
+        private static SqlConnection OpenConnection()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            try
             {
+                connection.Open();
+                Console.WriteLine("Connection is successful");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Connection failed: {ex.Message}");
+            }
+
+            return connection;
+        }
+
+        public bool SelectData(string queryString)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            using (SqlConnection connection = OpenConnection())
+            {
+                if (connection == null)
+                    return false;
+
+                SqlCommand command = new SqlCommand(queryString, connection);
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+            }
+
+            return table.Rows.Count > 0;
+        }
+
+        // Insert or update data in the database
+        public bool InsertUpdateData(string queryString)
+        {
+            using (SqlConnection connection = OpenConnection())
+            {
+                if (connection == null)
+                    return false;
+
+                SqlCommand command = new SqlCommand(queryString, connection);
+
                 try
                 {
-                    // Открытие подключения
-                    connection.Open();
-                    Console.WriteLine("Подключение открыто");
-                    connection.Close();
-                    Console.WriteLine("Подключение закрыто");
-
+                    return command.ExecuteNonQuery() == 1;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Ошибка: {ex.Message}");
+                    Console.WriteLine($"Error: {ex.Message}");
+                    return false;
                 }
             }
         }
-        
+
+        public bool DeleteData(string queryString)
+        {
+            using (SqlConnection connection = OpenConnection())
+            {
+                if (connection == null)
+                    return false;
+
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+                try
+                {
+                    return command.ExecuteNonQuery() == 1;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                    return false;
+                }
+            }
+        }
     }
+
+
 }

@@ -16,7 +16,7 @@ namespace GradeSystem.forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new homePageForm());
+            Application.Run(new FormMainMenu());
         }
     }
 }
