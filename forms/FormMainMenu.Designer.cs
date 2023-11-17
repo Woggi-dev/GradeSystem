@@ -155,7 +155,7 @@ namespace GradeSystem
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(415, 25);
+            this.lbTitle.Location = new System.Drawing.Point(375, 21);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(94, 37);
             this.lbTitle.TabIndex = 0;
