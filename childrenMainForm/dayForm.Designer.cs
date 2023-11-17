@@ -308,7 +308,7 @@ namespace GradeSystem.childrenMainForm
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 298);
+            this.label10.Location = new System.Drawing.Point(51, 300);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 25);
             this.label10.TabIndex = 71;
@@ -367,6 +367,7 @@ namespace GradeSystem.childrenMainForm
             this.label31.Size = new System.Drawing.Size(73, 25);
             this.label31.TabIndex = 77;
             this.label31.Text = "label31";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // dayForm
             // 
@@ -411,6 +412,7 @@ namespace GradeSystem.childrenMainForm
             this.MinimizeBox = false;
             this.Name = "dayForm";
             this.Text = "dayForm";
+            this.Load += new System.EventHandler(this.День_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
