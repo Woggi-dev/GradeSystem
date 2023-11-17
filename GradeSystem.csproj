@@ -131,6 +131,9 @@
     <Compile Include="forms\regForm3.Designer.cs">
       <DependentUpon>regForm3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grade_SystemDataSet.cs">
+      <DependentUpon>Grade_SystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Grade_SystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
