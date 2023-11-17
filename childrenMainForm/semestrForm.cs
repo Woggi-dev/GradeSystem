@@ -21,5 +21,10 @@ namespace GradeSystem.childrenMainForm
         {
 
         }
+
+        private void semestrForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
