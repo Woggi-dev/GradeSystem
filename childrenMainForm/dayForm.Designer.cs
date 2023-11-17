@@ -85,6 +85,7 @@ namespace GradeSystem.childrenMainForm
             this.label12.Size = new System.Drawing.Size(69, 23);
             this.label12.TabIndex = 51;
             this.label12.Text = "Оценка";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -96,6 +97,7 @@ namespace GradeSystem.childrenMainForm
             this.label13.Size = new System.Drawing.Size(69, 23);
             this.label13.TabIndex = 52;
             this.label13.Text = "Оценка";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -107,6 +109,7 @@ namespace GradeSystem.childrenMainForm
             this.label14.Size = new System.Drawing.Size(69, 23);
             this.label14.TabIndex = 53;
             this.label14.Text = "Оценка";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -118,6 +121,7 @@ namespace GradeSystem.childrenMainForm
             this.label15.Size = new System.Drawing.Size(69, 23);
             this.label15.TabIndex = 54;
             this.label15.Text = "Оценка";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -129,6 +133,7 @@ namespace GradeSystem.childrenMainForm
             this.label16.Size = new System.Drawing.Size(69, 23);
             this.label16.TabIndex = 55;
             this.label16.Text = "Оценка";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -140,6 +145,7 @@ namespace GradeSystem.childrenMainForm
             this.label17.Size = new System.Drawing.Size(119, 23);
             this.label17.TabIndex = 56;
             this.label17.Text = "Комментарий";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label19
             // 
@@ -151,6 +157,7 @@ namespace GradeSystem.childrenMainForm
             this.label19.Size = new System.Drawing.Size(119, 23);
             this.label19.TabIndex = 57;
             this.label19.Text = "Комментарий";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -162,6 +169,7 @@ namespace GradeSystem.childrenMainForm
             this.label20.Size = new System.Drawing.Size(119, 23);
             this.label20.TabIndex = 58;
             this.label20.Text = "Комментарий";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
@@ -173,6 +181,7 @@ namespace GradeSystem.childrenMainForm
             this.label21.Size = new System.Drawing.Size(119, 23);
             this.label21.TabIndex = 58;
             this.label21.Text = "Комментарий";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
@@ -184,6 +193,7 @@ namespace GradeSystem.childrenMainForm
             this.label22.Size = new System.Drawing.Size(119, 23);
             this.label22.TabIndex = 59;
             this.label22.Text = "Комментарий";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label18
             // 
@@ -238,9 +248,10 @@ namespace GradeSystem.childrenMainForm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(70, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 25);
+            this.label2.Size = new System.Drawing.Size(22, 25);
             this.label2.TabIndex = 65;
-            this.label2.Text = "label2";
+            this.label2.Text = "1";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -250,6 +261,7 @@ namespace GradeSystem.childrenMainForm
             this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 66;
             this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -259,6 +271,7 @@ namespace GradeSystem.childrenMainForm
             this.label4.Size = new System.Drawing.Size(63, 25);
             this.label4.TabIndex = 67;
             this.label4.Text = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -268,6 +281,7 @@ namespace GradeSystem.childrenMainForm
             this.label5.Size = new System.Drawing.Size(63, 25);
             this.label5.TabIndex = 70;
             this.label5.Text = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -277,15 +291,17 @@ namespace GradeSystem.childrenMainForm
             this.label6.Size = new System.Drawing.Size(63, 25);
             this.label6.TabIndex = 69;
             this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(70, 229);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 25);
+            this.label7.Size = new System.Drawing.Size(22, 25);
             this.label7.TabIndex = 68;
-            this.label7.Text = "label7";
+            this.label7.Text = "2";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -295,6 +311,7 @@ namespace GradeSystem.childrenMainForm
             this.label8.Size = new System.Drawing.Size(63, 25);
             this.label8.TabIndex = 73;
             this.label8.Text = "label8";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -304,15 +321,17 @@ namespace GradeSystem.childrenMainForm
             this.label9.Size = new System.Drawing.Size(63, 25);
             this.label9.TabIndex = 72;
             this.label9.Text = "label9";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(70, 297);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 25);
+            this.label10.Size = new System.Drawing.Size(22, 25);
             this.label10.TabIndex = 71;
-            this.label10.Text = "label10";
+            this.label10.Text = "3";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -322,6 +341,7 @@ namespace GradeSystem.childrenMainForm
             this.label11.Size = new System.Drawing.Size(73, 25);
             this.label11.TabIndex = 76;
             this.label11.Text = "label11";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label27
             // 
@@ -331,15 +351,17 @@ namespace GradeSystem.childrenMainForm
             this.label27.Size = new System.Drawing.Size(73, 25);
             this.label27.TabIndex = 75;
             this.label27.Text = "label27";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(70, 360);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(73, 25);
+            this.label28.Size = new System.Drawing.Size(22, 25);
             this.label28.TabIndex = 74;
-            this.label28.Text = "label28";
+            this.label28.Text = "4";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -349,6 +371,7 @@ namespace GradeSystem.childrenMainForm
             this.label29.Size = new System.Drawing.Size(73, 25);
             this.label29.TabIndex = 79;
             this.label29.Text = "label29";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -358,15 +381,16 @@ namespace GradeSystem.childrenMainForm
             this.label30.Size = new System.Drawing.Size(73, 25);
             this.label30.TabIndex = 78;
             this.label30.Text = "label30";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(70, 418);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(73, 25);
+            this.label31.Size = new System.Drawing.Size(22, 25);
             this.label31.TabIndex = 77;
-            this.label31.Text = "label31";
+            this.label31.Text = "4";
             this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // dayForm

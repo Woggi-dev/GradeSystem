@@ -75,5 +75,32 @@ namespace GradeSystem.scripts
             }
         }
 
+        public static string ExecuteSqlQuery(string query)
+        {
+            string result = null;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Выполнение SQL-запроса и получение результата
+                        object queryResult = command.ExecuteScalar();
+
+                        // Преобразование результата в строку (если необходимо)
+                        result = queryResult != null ? queryResult.ToString() : null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            return result;
+        }
     }
 }
