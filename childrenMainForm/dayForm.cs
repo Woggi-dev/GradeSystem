@@ -41,5 +41,15 @@ namespace GradeSystem.childrenMainForm
         {
 
         }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void День_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
