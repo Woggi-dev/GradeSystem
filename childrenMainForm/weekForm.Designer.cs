@@ -59,7 +59,7 @@ namespace GradeSystem.childrenMainForm
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(82, 223);
+            this.label8.Location = new System.Drawing.Point(111, 198);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 25);
@@ -69,7 +69,7 @@ namespace GradeSystem.childrenMainForm
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(82, 176);
+            this.label7.Location = new System.Drawing.Point(111, 151);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 25);
@@ -80,7 +80,7 @@ namespace GradeSystem.childrenMainForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label5.Location = new System.Drawing.Point(395, 348);
+            this.label5.Location = new System.Drawing.Point(386, 323);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 32);
@@ -91,7 +91,7 @@ namespace GradeSystem.childrenMainForm
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label4.Location = new System.Drawing.Point(52, 348);
+            this.label4.Location = new System.Drawing.Point(81, 323);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 32);
@@ -102,7 +102,7 @@ namespace GradeSystem.childrenMainForm
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label3.Location = new System.Drawing.Point(698, 62);
+            this.label3.Location = new System.Drawing.Point(681, 37);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 32);
@@ -113,7 +113,7 @@ namespace GradeSystem.childrenMainForm
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label2.Location = new System.Drawing.Point(395, 62);
+            this.label2.Location = new System.Drawing.Point(386, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 32);
@@ -124,7 +124,7 @@ namespace GradeSystem.childrenMainForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label1.Location = new System.Drawing.Point(52, 62);
+            this.label1.Location = new System.Drawing.Point(81, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 32);
@@ -135,7 +135,7 @@ namespace GradeSystem.childrenMainForm
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(82, 133);
+            this.label6.Location = new System.Drawing.Point(111, 108);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 25);
@@ -145,7 +145,7 @@ namespace GradeSystem.childrenMainForm
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(82, 265);
+            this.label12.Location = new System.Drawing.Point(111, 240);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 25);
@@ -155,7 +155,7 @@ namespace GradeSystem.childrenMainForm
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(402, 265);
+            this.label9.Location = new System.Drawing.Point(393, 240);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 25);
@@ -165,7 +165,7 @@ namespace GradeSystem.childrenMainForm
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(402, 133);
+            this.label10.Location = new System.Drawing.Point(393, 108);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 25);
@@ -175,7 +175,7 @@ namespace GradeSystem.childrenMainForm
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(402, 223);
+            this.label11.Location = new System.Drawing.Point(393, 198);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 25);
@@ -185,7 +185,7 @@ namespace GradeSystem.childrenMainForm
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(402, 176);
+            this.label13.Location = new System.Drawing.Point(393, 151);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 25);
@@ -195,7 +195,7 @@ namespace GradeSystem.childrenMainForm
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(699, 265);
+            this.label14.Location = new System.Drawing.Point(682, 240);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 25);
@@ -205,7 +205,7 @@ namespace GradeSystem.childrenMainForm
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(699, 133);
+            this.label15.Location = new System.Drawing.Point(682, 108);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 25);
@@ -215,7 +215,7 @@ namespace GradeSystem.childrenMainForm
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(699, 223);
+            this.label16.Location = new System.Drawing.Point(682, 198);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 25);
@@ -225,7 +225,7 @@ namespace GradeSystem.childrenMainForm
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(699, 176);
+            this.label17.Location = new System.Drawing.Point(682, 151);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 25);
@@ -235,7 +235,7 @@ namespace GradeSystem.childrenMainForm
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(402, 541);
+            this.label18.Location = new System.Drawing.Point(393, 516);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(73, 25);
@@ -245,7 +245,7 @@ namespace GradeSystem.childrenMainForm
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(402, 409);
+            this.label19.Location = new System.Drawing.Point(393, 384);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(73, 25);
@@ -255,7 +255,7 @@ namespace GradeSystem.childrenMainForm
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(402, 499);
+            this.label20.Location = new System.Drawing.Point(393, 474);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(73, 25);
@@ -265,7 +265,7 @@ namespace GradeSystem.childrenMainForm
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(402, 452);
+            this.label21.Location = new System.Drawing.Point(393, 427);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 25);
@@ -275,7 +275,7 @@ namespace GradeSystem.childrenMainForm
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(72, 541);
+            this.label22.Location = new System.Drawing.Point(111, 516);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(73, 25);
@@ -285,7 +285,7 @@ namespace GradeSystem.childrenMainForm
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(72, 409);
+            this.label23.Location = new System.Drawing.Point(111, 384);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(73, 25);
@@ -295,7 +295,7 @@ namespace GradeSystem.childrenMainForm
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(72, 499);
+            this.label24.Location = new System.Drawing.Point(111, 474);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(73, 25);
@@ -305,7 +305,7 @@ namespace GradeSystem.childrenMainForm
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(72, 452);
+            this.label25.Location = new System.Drawing.Point(111, 427);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(73, 25);
@@ -346,7 +346,7 @@ namespace GradeSystem.childrenMainForm
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "weekForm";
-            this.Text = "weekForm";
+            this.Text = "Успеваемость за неделю";
             this.Load += new System.EventHandler(this.weekForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
