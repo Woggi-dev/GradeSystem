@@ -286,7 +286,7 @@ namespace GradeSystem.forms
             // 
             this.pwdTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.pwdTextbox.Location = new System.Drawing.Point(54, 163);
-            this.pwdTextbox.MaxLength = 50;
+            this.pwdTextbox.MaxLength = 20;
             this.pwdTextbox.Multiline = true;
             this.pwdTextbox.Name = "pwdTextbox";
             this.pwdTextbox.PasswordChar = '•';
@@ -298,7 +298,7 @@ namespace GradeSystem.forms
             // 
             this.pwdAgainTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.pwdAgainTextbox.Location = new System.Drawing.Point(54, 249);
-            this.pwdAgainTextbox.MaxLength = 50;
+            this.pwdAgainTextbox.MaxLength = 20;
             this.pwdAgainTextbox.Multiline = true;
             this.pwdAgainTextbox.Name = "pwdAgainTextbox";
             this.pwdAgainTextbox.PasswordChar = '•';

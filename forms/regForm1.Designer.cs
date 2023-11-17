@@ -64,7 +64,7 @@ namespace GradeSystem.forms
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.label2.Location = new System.Drawing.Point(52, 424);
+            this.label2.Location = new System.Drawing.Point(52, 484);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(278, 69);
             this.label2.TabIndex = 3;
@@ -96,6 +96,7 @@ namespace GradeSystem.forms
             this.nameTextbox.BackColor = System.Drawing.SystemColors.Window;
             this.nameTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.nameTextbox.Location = new System.Drawing.Point(52, 240);
+            this.nameTextbox.MaxLength = 20;
             this.nameTextbox.Multiline = true;
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(278, 35);
@@ -107,6 +108,7 @@ namespace GradeSystem.forms
             this.surnameTextbox.BackColor = System.Drawing.Color.White;
             this.surnameTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.surnameTextbox.Location = new System.Drawing.Point(52, 157);
+            this.surnameTextbox.MaxLength = 20;
             this.surnameTextbox.Multiline = true;
             this.surnameTextbox.Name = "surnameTextbox";
             this.surnameTextbox.Size = new System.Drawing.Size(278, 35);
@@ -129,6 +131,7 @@ namespace GradeSystem.forms
             this.patronymicTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.patronymicTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.patronymicTextbox.Location = new System.Drawing.Point(54, 329);
+            this.patronymicTextbox.MaxLength = 20;
             this.patronymicTextbox.Multiline = true;
             this.patronymicTextbox.Name = "patronymicTextbox";
             this.patronymicTextbox.Size = new System.Drawing.Size(276, 35);
@@ -152,7 +155,7 @@ namespace GradeSystem.forms
             this.patronymicCheckBox.FlatAppearance.BorderSize = 0;
             this.patronymicCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.patronymicCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.patronymicCheckBox.Location = new System.Drawing.Point(52, 390);
+            this.patronymicCheckBox.Location = new System.Drawing.Point(52, 450);
             this.patronymicCheckBox.Name = "patronymicCheckBox";
             this.patronymicCheckBox.Size = new System.Drawing.Size(104, 21);
             this.patronymicCheckBox.TabIndex = 12;
@@ -179,7 +182,7 @@ namespace GradeSystem.forms
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(136)))), ((int)(((byte)(222)))));
-            this.nextButton.Location = new System.Drawing.Point(273, 496);
+            this.nextButton.Location = new System.Drawing.Point(273, 556);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(82, 38);
             this.nextButton.TabIndex = 17;
@@ -256,7 +259,7 @@ namespace GradeSystem.forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(382, 567);
+            this.ClientSize = new System.Drawing.Size(382, 634);
             this.Controls.Add(this.errorLabelPatronymic);
             this.Controls.Add(this.errorLabelSurname);
             this.Controls.Add(this.errorLabelName);
@@ -281,6 +284,7 @@ namespace GradeSystem.forms
             this.Name = "regForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.regForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

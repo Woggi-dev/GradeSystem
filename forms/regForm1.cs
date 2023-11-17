@@ -15,16 +15,20 @@ namespace GradeSystem.forms
     {
         // Приватные статические булевые переменные (принадлежащие классу) для проверки данных в обработчике событий nextButton_Click
         private static bool isNameValid, isSurnameValid, isPatronymicValid;
+        private string surname, name, patronymic;
 
         // Функция открыть новую форму и скрыть старую
-        public void OpenForm(Form currectForm, Form form)
+        public void OpenForm(Form form)
         {
-            currectForm.Hide();
+            this.Hide();
             form.Show();
         }
-        public regForm1()
+        public regForm1(string surname, string name, string patronymic)
         {
             InitializeComponent();
+            this.surname = surname;
+            this.name = name;
+            this.patronymic = patronymic;
         }
 
         // Функция для установки параметров для надписей (labels) отчества
@@ -38,11 +42,15 @@ namespace GradeSystem.forms
             patronymicTextbox.Enabled = textboxEnabled;
             patronymicTextbox.BackColor = textboxBackColor;
             patronymicTextbox.Text = textboxText;
-            
+
         }
         // Функция для преобразования из вида "ВАсИф" в "Васиф"
         private static string ToTitle(string input)
         {
+            if (string.IsNullOrEmpty(input))
+            {
+                return "";
+            }
             return char.ToUpper(input[0]) + input.Substring(1).ToLower();
         }
         // Функция для установки свойств для надписей ошибок
@@ -59,6 +67,7 @@ namespace GradeSystem.forms
             if (string.IsNullOrEmpty(input))
             {
                 SetValidationProperties(errorLabel, Color.Khaki, $"Заполните поле");
+                isValid = false;
                 return;
             }
             // Цикл для проверки всего введенного пользователем
@@ -87,7 +96,7 @@ namespace GradeSystem.forms
                 else if (!(c >= '\u0400' && c <= '\u04FF'))
                 {
                     isValid = false;
-                    SetValidationProperties(errorLabel, Color.IndianRed, $"{obj} не содержит кирилицу");
+                    SetValidationProperties(errorLabel, Color.IndianRed, $"{obj} должно содержать только кирилицу");
                     return;
                 }
             }
@@ -98,26 +107,21 @@ namespace GradeSystem.forms
         // Обработчик события нажатия кнопки "Войти" - перейти на logForm
         private void logButton_Click(object sender, EventArgs e)
         {
-            OpenForm(this, new logForm());
+            OpenForm(new logForm());
         }
 
         // Обработчик события нажатия кнопки "Далее" - переход на regForm2
         private void nextButton_Click(object sender, EventArgs e)
         {
-
-            // Сохраняем фамилию, имя, отчество в переменные
-            string surname = surnameTextbox.Text;
-            string name = nameTextbox.Text;
-            string patronymic = patronymicTextbox.Text;
-
             // Если все компоненты - валидны (true) - преобразуем из вида "ВаСиФ" в "Васиф" и открываем форму regForm2
+
             if (isNameValid && isSurnameValid && isPatronymicValid)
             {
                 name = ToTitle(name);
                 surname = ToTitle(surname);
                 patronymic = ToTitle(patronymic);
 
-                OpenForm(this, new regForm2());
+                OpenForm(new regForm2(surname, name, patronymic, "", ""));
             }
         }
         // Обработчик события "Нет отчества"
@@ -128,36 +132,49 @@ namespace GradeSystem.forms
             {
                 case true:
                     SetPatronymicLabels("\U0001F512", Color.Gray, false, Color.FromArgb(224, 224, 224), "");
+                    isPatronymicValid = true;
                     break;
                 default:
+                    isPatronymicValid = false;
                     SetPatronymicLabels("Заполните поле", Color.Khaki, true, Color.White, "");
                     break;
             }
         }
 
+        private void regForm1_Load(object sender, EventArgs e)
+        {
+            surnameTextbox.Text = surname;
+            nameTextbox.Text = name;
+            patronymicTextbox.Text = patronymic;
+        }
+
         // Обработчик события нажатия кнопки "Крестик" - перейти на главную страницу 
         private void homepageButton_Click(object sender, EventArgs e)
         {
-            OpenForm(this, new homePageForm());
+            OpenForm(new homePageForm());
 
         }
         // Обработчик события написания текстовых полей "Имя", "Фамилия", "Отчество" и валидация данных
         private void surnameTextbox_TextChanged(object sender, EventArgs e)
         {
-            DataValidation(errorLabelSurname, surnameTextbox.Text, "Фамилия", ref isSurnameValid);
+            surname = surnameTextbox.Text;
+            DataValidation(errorLabelSurname, surname, "Фамилия", ref isSurnameValid);
         }
 
         private void nameTextbox_TextChanged(object sender, EventArgs e)
         {
-            DataValidation(errorLabelName, nameTextbox.Text, "Имя", ref isNameValid);
+            name = nameTextbox.Text;
+            DataValidation(errorLabelName, name, "Имя", ref isNameValid);
         }
 
         private void patronymicTextbox_TextChanged(object sender, EventArgs e)
         {
             // Если чекбокс "Нет отчества" неактивирован, то запустить валидацию данных
+            patronymic = patronymicTextbox.Text;
             if (patronymicTextbox.Enabled)
             {
-                DataValidation(errorLabelPatronymic, patronymicTextbox.Text, "Отчество", ref isPatronymicValid);
+                DataValidation(errorLabelPatronymic, patronymic, "Отчество", ref isPatronymicValid);
+
             }
         }
 
