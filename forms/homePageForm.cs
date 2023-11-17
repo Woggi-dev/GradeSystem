@@ -56,7 +56,7 @@ namespace GradeSystem.forms
         // Обработчики события Reg/Log/About/Privacy/Conditions/contactButton_Click - нажать на кнопки
         private void regButton_Click(object sender, EventArgs e)
         {
-            OpenForm(new regForm1());
+            OpenForm(new regForm1("", "", ""));
         }
 
         private void logButton_Click(object sender, EventArgs e)

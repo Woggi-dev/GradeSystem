@@ -15,16 +15,25 @@ namespace GradeSystem.forms
     {
         // Приватные статические булевые переменные (принадлежащие классу) для проверки данных в обработчике событий fullyRegButton_Click
         private static bool isPwdValid;
+        private string surname, name, patronymic, phoneNumber, email, pwd;
         // Приватная статическая ссылка на класс logForm
         private static logForm logForm;
-        
+        private static homePageForm homePageForm;
 
+        
         // Конструктор класса
-        public regForm3()
+        public regForm3(string surname, string name, string patronymic, string phoneNumber, string email)
         {
             InitializeComponent();
             // Создаем новый экземляр класса logForm
-            logForm = new logForm();    
+            logForm = new logForm();
+            homePageForm = new homePageForm();
+
+            this.surname = surname;
+            this.name = name;
+            this.patronymic = patronymic;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
         }
         // Функция для открытия формы
         private void OpenForm(Form form)
@@ -60,7 +69,7 @@ namespace GradeSystem.forms
         // Обработчик события перехода на главную страницу
         private void homepageButton_Click(object sender, EventArgs e)
         {
-            OpenForm(new homePageForm());
+            OpenForm(homePageForm);
         }
 
         // Обработчик события изменения состояния Checkbox (галочка/нет галочки)
@@ -80,7 +89,7 @@ namespace GradeSystem.forms
         // Обработчик события нажатия кнопки "Назад" - переход на форму regForm2
         private void backButton_Click(object sender, EventArgs e)
         {
-            OpenForm(new regForm2());
+            OpenForm(new regForm2(surname, name, patronymic, phoneNumber, email));
         }
 
         // Обработчик события изменения текста
@@ -90,7 +99,7 @@ namespace GradeSystem.forms
             errorLabelPwd.Text = "";
 
             // Сохраняем пароль 
-            string pwd = pwdTextbox.Text;
+            pwd = pwdTextbox.Text;
 
             // Создаем массивы надписей для ошибок, запрещенные символы и проверки пароля (длина пароля, есть ли заглавные/маленькие буквы, есть ли цифры)
             char[] forbiddenChars = { ' ', '"', '\'', '`', ';', ':'};
@@ -127,17 +136,26 @@ namespace GradeSystem.forms
         // Обработчик события нажатия кнопки "Зарегистрироваться" - переход на основную форму
         private void fullyRegButton_Click(object sender, EventArgs e)
         {
-            // Если пароль валидный и он совпадает с другим паролем, войти в аккаунт
-            if (isPwdValid && pwdAgainTextbox.Text == pwdTextbox.Text)
+            bool arePwdsEqual = pwdAgainTextbox.Text == pwd;
+            // Если пароль валидный и он совпадает с другим паролем - зарегистрироваться
+            if (isPwdValid && arePwdsEqual)
             {
                 MessageBox.Show("Вы вошли в аккаунт");
             }
-            // Если пароль валидный, но он совпадает с другим паролем, войти в аккаунт
-            else if (isPwdValid && pwdAgainTextbox.Text != pwdTextbox.Text)
+            // Если пароль валидный, но он не совпадает с другим паролем - вывести ошибку
+            else if (isPwdValid && !arePwdsEqual)
             {
                 // Вызываем функции для вывода надписей для ошибок
                 SetPwdValidationLabels("Пароли не совпадают", Color.IndianRed);
                 SetPwdAgainValidationLabels("Пароли не совпадают", Color.IndianRed);
+            }
+            else
+            {
+                Database.PerformSqlQuery($"insert into Student(name, surname, patronymic) " +
+            $"VALUES('{name}', '{surname}', '{patronymic}')");
+                Database.PerformSqlQuery($"insert into User(login, pass) " +
+$"VALUES('{phoneNumber}', '{pwd}'')");
+                OpenForm(homePageForm);
             }
         }
 
