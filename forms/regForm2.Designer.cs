@@ -225,6 +225,7 @@ namespace GradeSystem.forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "regForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.regForm2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

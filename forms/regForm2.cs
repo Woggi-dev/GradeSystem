@@ -15,9 +15,16 @@ namespace GradeSystem.forms
     {
         // Приватные статические булевые переменные (принадлежащие классу) для проверки данных в обработчике событий nextButton_Click
         private static bool isPhoneValid, isEmailValid;
-        public regForm2()
+        private string surname, name, patronymic, phoneNumber, email;
+
+        public regForm2(string surname, string name, string patronymic, string phoneNumber, string email)
         {
             InitializeComponent();
+            this.surname = surname;
+            this.name = name;
+            this.patronymic = patronymic;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
         }
 
         // Функция открыть новую форму и скрыть старую
@@ -41,18 +48,24 @@ namespace GradeSystem.forms
             OpenForm(new logForm());
         }
 
+        private void regForm2_Load(object sender, EventArgs e)
+        {
+            phoneTextbox.Text = phoneNumber;
+            emailTextbox.Text = email;
+        }
+
         // Обработчик события нажатия кнопки "Далее" - переход на regForm2
         private void nextButton_Click(object sender, EventArgs e)
         {
             if (isPhoneValid && isEmailValid)
             {
-                OpenForm(new regForm3());
+                OpenForm(new regForm3(surname, name, patronymic, phoneNumber, email));
             }
         }
         // Обработчик события нажатия кнопки "Назад" - переход на regForm1
         private void backButton_Click(object sender, EventArgs e)
         {
-            OpenForm(new regForm1());
+            OpenForm(new regForm1(surname, name, patronymic));
         }
 
         // Обработчик события нажатия кнопки "Крестик" - переход на главную страницу
@@ -65,7 +78,7 @@ namespace GradeSystem.forms
         private void phoneTextbox_TextChanged(object sender, EventArgs e)
         {
             // Сохраняем номер телефона
-            string phoneNumber = phoneTextbox.Text;
+            phoneNumber = phoneTextbox.Text;
 
             // Проверка начинается ли номер телефона с +79
             bool isItStarts79 = phoneNumber.StartsWith("+79");
@@ -73,6 +86,7 @@ namespace GradeSystem.forms
             // Если поле телефона пустое - установить свойства надписей ошибки и выйти из функции
             if (string.IsNullOrEmpty(phoneNumber))
             {
+                isPhoneValid = false;
                 SetValidationProperties(errorLabelPhone, Color.Khaki, "Заполните поле");
                 return;
             }
@@ -94,6 +108,7 @@ namespace GradeSystem.forms
                 || phoneNumber.Length < 11)
             {
                 SetValidationProperties(errorLabelPhone, Color.IndianRed, "Неверный формат телефона");
+                isPhoneValid = false;
                 return;
             }
 
@@ -105,12 +120,13 @@ namespace GradeSystem.forms
         private void emailTextbox_TextChanged(object sender, EventArgs e)
         {
             // Сохраняем почту
-            string email = emailTextbox.Text;
+            email = emailTextbox.Text;
 
             // Если поле почты пустое - установить свойства надписей ошибки и выйти из функции
             if (string.IsNullOrEmpty(email))
             {
                 SetValidationProperties(errorLabelEmail, Color.Khaki, "Заполните поле");
+                isEmailValid = false;
                 return;
             }
 
@@ -118,6 +134,7 @@ namespace GradeSystem.forms
             if (!Regex.IsMatch(email, @"\b(gmail.com|mail.ru|inbox.ru|yandex.ru)$"))
             {
                 SetValidationProperties(errorLabelEmail, Color.IndianRed, "Неверный формат эл.почты");
+                isEmailValid = false;
                 return;
             }
 

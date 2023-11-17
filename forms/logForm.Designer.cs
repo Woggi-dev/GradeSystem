@@ -78,7 +78,7 @@ namespace GradeSystem.forms
             // 
             this.pwdTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.pwdTextbox.Location = new System.Drawing.Point(59, 216);
-            this.pwdTextbox.MaxLength = 50;
+            this.pwdTextbox.MaxLength = 20;
             this.pwdTextbox.Multiline = true;
             this.pwdTextbox.Name = "pwdTextbox";
             this.pwdTextbox.PasswordChar = '•';
@@ -100,7 +100,7 @@ namespace GradeSystem.forms
             // 
             this.loginTextbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginTextbox.Location = new System.Drawing.Point(59, 139);
-            this.loginTextbox.MaxLength = 50;
+            this.loginTextbox.MaxLength = 20;
             this.loginTextbox.Multiline = true;
             this.loginTextbox.Name = "loginTextbox";
             this.loginTextbox.Size = new System.Drawing.Size(274, 35);

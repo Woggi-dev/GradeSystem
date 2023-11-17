@@ -18,7 +18,7 @@ namespace GradeSystem.scripts
         }
 
         // Open a connection and return it
-        private static SqlConnection OpenConnection()
+        public static SqlConnection OpenConnection()
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -35,7 +35,7 @@ namespace GradeSystem.scripts
             return connection;
         }
 
-        public bool SelectData(string queryString)
+        public static bool SelectData(string queryString)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
@@ -54,7 +54,7 @@ namespace GradeSystem.scripts
         }
 
         // Insert or update data in the database
-        public bool InsertUpdateData(string queryString)
+        public static bool PerformSqlQuery(string queryString)
         {
             using (SqlConnection connection = OpenConnection())
             {
@@ -75,27 +75,5 @@ namespace GradeSystem.scripts
             }
         }
 
-        public bool DeleteData(string queryString)
-        {
-            using (SqlConnection connection = OpenConnection())
-            {
-                if (connection == null)
-                    return false;
-
-                SqlCommand command = new SqlCommand(queryString, connection);
-
-                try
-                {
-                    return command.ExecuteNonQuery() == 1;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error: {ex.Message}");
-                    return false;
-                }
-            }
-        }
     }
-
-
 }
