@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeSystem
+namespace GradeSystem.forms
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace GradeSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new forms.regForm3());
+            Application.Run(new FormMainMenu());
         }
     }
 }

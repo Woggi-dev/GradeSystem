@@ -51,7 +51,7 @@ namespace GradeSystem
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.Font = new System.Drawing.Font("Segoe", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     
@@ -66,9 +66,9 @@ namespace GradeSystem
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.BackColor = Color.FromArgb(36, 136, 222);
                     previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    previousBtn.Font = new System.Drawing.Font("Segoe", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
@@ -86,7 +86,7 @@ namespace GradeSystem
             this.panelDesktopPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
+            lbTitle.Text = childForm.Text;
         }
 
 
@@ -120,17 +120,18 @@ namespace GradeSystem
             OpenChildForm(new childrenMainForm.resultsForm(), sender);
         }
 
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void panelLogo_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbTitle_Click(object sender, EventArgs e)
         {
 
         }
