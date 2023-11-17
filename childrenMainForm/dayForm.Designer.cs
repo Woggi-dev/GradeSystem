@@ -411,7 +411,7 @@ namespace GradeSystem.childrenMainForm
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "dayForm";
-            this.Text = "dayForm";
+            this.Text = "Успеваемость за день";
             this.Load += new System.EventHandler(this.День_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
