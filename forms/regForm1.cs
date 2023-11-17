@@ -15,7 +15,6 @@ namespace GradeSystem.forms
     {
         // Приватные статические булевые переменные (принадлежащие классу) для проверки данных в обработчике событий nextButton_Click
         private static bool isNameValid, isSurnameValid, isPatronymicValid;
-        
 
         // Функция открыть новую форму и скрыть старую
         public void OpenForm(Form currectForm, Form form)
@@ -118,9 +117,6 @@ namespace GradeSystem.forms
                 surname = ToTitle(surname);
                 patronymic = ToTitle(patronymic);
 
-                Database.Connect();
-
-                
                 OpenForm(this, new regForm2());
             }
         }

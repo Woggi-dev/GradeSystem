@@ -13,12 +13,9 @@ namespace GradeSystem.forms
 {
     public partial class homePageForm : Form
     {
-        Database database;
-
         public homePageForm()
         {
             InitializeComponent();
-
 
             // Добавляем обработчики события наведения/отведения мышки к кнопкам-надписям (button-label)
             aboutButton.MouseEnter += Label_MouseEnter;
