@@ -157,6 +157,12 @@
     <EmbeddedResource Include="childrenMainForm\dayForm.resx">
       <DependentUpon>dayForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="childrenMainForm\resultsForm.resx">
+      <DependentUpon>resultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="childrenMainForm\semestrForm.resx">
+      <DependentUpon>semestrForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="childrenMainForm\weekForm.resx">
       <DependentUpon>weekForm.cs</DependentUpon>
     </EmbeddedResource>

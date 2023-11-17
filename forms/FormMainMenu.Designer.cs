@@ -37,8 +37,8 @@ namespace GradeSystem
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
+            this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -149,15 +149,6 @@ namespace GradeSystem
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             // 
-            // panelDesktopPanel
-            // 
-            this.panelDesktopPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(220, 85);
-            this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(1321, 731);
-            this.panelDesktopPanel.TabIndex = 2;
-            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
-            // 
             // lbTitle
             // 
             this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -166,15 +157,24 @@ namespace GradeSystem
             this.lbTitle.ForeColor = System.Drawing.Color.White;
             this.lbTitle.Location = new System.Drawing.Point(415, 25);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(77, 30);
+            this.lbTitle.Size = new System.Drawing.Size(94, 37);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "HOME";
             this.lbTitle.UseMnemonic = false;
             this.lbTitle.Click += new System.EventHandler(this.lbTitle_Click);
             // 
+            // panelDesktopPanel
+            // 
+            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktopPanel.Location = new System.Drawing.Point(220, 85);
+            this.panelDesktopPanel.Name = "panelDesktopPanel";
+            this.panelDesktopPanel.Size = new System.Drawing.Size(888, 618);
+            this.panelDesktopPanel.TabIndex = 2;
+            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
+            // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 703);
             this.Controls.Add(this.panelDesktopPanel);
