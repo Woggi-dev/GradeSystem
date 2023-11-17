@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GradeSystem.scripts;
 
 namespace GradeSystem.forms
 {
     public partial class homePageForm : Form
     {
+        Database database;
+
         public homePageForm()
         {
             InitializeComponent();
-            
+
+
             // Добавляем обработчики события наведения/отведения мышки к кнопкам-надписям (button-label)
             aboutButton.MouseEnter += Label_MouseEnter;
             aboutButton.MouseLeave += Label_MouseLeave;

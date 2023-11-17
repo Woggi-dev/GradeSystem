@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GradeSystem.scripts;
 
 namespace GradeSystem.forms
 {
@@ -14,6 +15,7 @@ namespace GradeSystem.forms
     {
         // Приватные статические булевые переменные (принадлежащие классу) для проверки данных в обработчике событий nextButton_Click
         private static bool isNameValid, isSurnameValid, isPatronymicValid;
+        private static Database;
 
         // Функция открыть новую форму и скрыть старую
         public void OpenForm(Form currectForm, Form form)
@@ -103,6 +105,7 @@ namespace GradeSystem.forms
         // Обработчик события нажатия кнопки "Далее" - переход на regForm2
         private void nextButton_Click(object sender, EventArgs e)
         {
+
             // Сохраняем фамилию, имя, отчество в переменные
             string surname = surnameTextbox.Text;
             string name = nameTextbox.Text;
@@ -115,6 +118,9 @@ namespace GradeSystem.forms
                 surname = ToTitle(surname);
                 patronymic = ToTitle(patronymic);
 
+                Database.Connect();
+
+                
                 OpenForm(this, new regForm2());
             }
         }
